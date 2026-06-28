@@ -1,0 +1,33 @@
+# Netlify config — static site, no build step.
+[build]
+  publish = "."
+  command = ""
+
+# Security + performance headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+# IMPORTANT: filenames here are NOT content-hashed, so CSS/JS must REVALIDATE
+# on every deploy. Do NOT use "immutable" — it pins a stale copy in browsers
+# for a year and makes new deploys silently not show up. max-age=0 +
+# must-revalidate caches but always checks the CDN (cheap 304s via ETag).
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Images change rarely; cache a day but never mark immutable.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, must-revalidate"

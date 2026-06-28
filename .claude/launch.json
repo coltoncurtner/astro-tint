@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "astro-tint",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-c", "import http.server,socketserver,functools; H=functools.partial(http.server.SimpleHTTPRequestHandler, directory='/Users/coltoncurtner/Sites/clients/astro-tint'); socketserver.TCPServer.allow_reuse_address=True; socketserver.TCPServer(('127.0.0.1',4331),H).serve_forever()"],
+      "port": 4331
+    }
+  ]
+}
