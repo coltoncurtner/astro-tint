@@ -14,8 +14,8 @@
        Preview domain (free Netlify): astrotintsolutions.netlify.app
        Swap every astrotintsolutions.netlify.app → astrotint.com at handoff.
        ============================================================ -->
-  <title>Astro Tint Solutions — Premium Window Tint &amp; Paint Protection in Plainfield, IL</title>
-  <meta name="description" content="Premium ceramic window tint, paint protection film & ceramic coatings for cars, homes & businesses in Plainfield, IL. Blocks heat, glare & UV — backed by a lifetime warranty. Free quote." />
+  <title>Astro Tint Solutions — Premium Window Tint &amp; Paint Protection | Plainfield &amp; Chicagoland</title>
+  <meta name="description" content="Premium ceramic window tint, paint protection film & ceramic coatings for cars, homes & businesses across Chicago & all of Chicagoland. Heat, glare & UV blocking — lifetime warranty. Free quote." />
   <meta name="author" content="Astro Tint Solutions" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
   <meta name="theme-color" content="#0A0E15" />
@@ -24,7 +24,7 @@
   <!-- Open Graph / social share -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Astro Tint Solutions — Premium Window Tint & Paint Protection" />
-  <meta property="og:description" content="Ceramic window tint, PPF & ceramic coatings for cars, homes & businesses in Plainfield, IL. Heat-blocking, glare-cutting, lifetime warranty. Free quote." />
+  <meta property="og:description" content="Ceramic window tint, PPF & ceramic coatings for cars, homes & businesses across Chicago & all of Chicagoland. Heat-blocking, glare-cutting, lifetime warranty. Free quote." />
   <meta property="og:url" content="https://astrotintsolutions.netlify.app/" />
   <meta property="og:site_name" content="Astro Tint Solutions" />
   <meta property="og:image" content="https://astrotintsolutions.netlify.app/assets/og-image.png" />
@@ -46,6 +46,11 @@
   <!-- ============================================================
        STRUCTURED DATA — real Astro Tint details (Plainfield local pack).
        Update phone/address/geo if anything changes; geo is approximate.
+       TODO (when Seb confirms the exact Google review count): add an
+       "aggregateRating" to the business object below, e.g.
+         "aggregateRating": { "@type": "AggregateRating",
+            "ratingValue": "5.0", "reviewCount": "NN" }
+       Only add it with a real, accurate count — never a guess.
        ============================================================ -->
   <script type="application/ld+json">
   {
@@ -54,7 +59,7 @@
     "additionalType": "https://schema.org/HomeAndConstructionBusiness",
     "@id": "https://astrotintsolutions.netlify.app/#business",
     "name": "Astro Tint Solutions",
-    "description": "Premium automotive, residential and commercial window tinting, paint protection film (PPF) and ceramic coatings serving Plainfield, IL and the surrounding suburbs.",
+    "description": "Premium automotive, residential and commercial window tinting, paint protection film (PPF) and ceramic coatings serving Chicago and all of Chicagoland, based in Plainfield, IL.",
     "url": "https://astrotintsolutions.netlify.app/",
     "image": "https://astrotintsolutions.netlify.app/assets/og-image.png",
     "telephone": "+1-630-362-0909",
@@ -70,12 +75,24 @@
     },
     "geo": { "@type": "GeoCoordinates", "latitude": 41.6584, "longitude": -88.1834 },
     "areaServed": [
+      { "@type": "City", "name": "Chicago" },
       { "@type": "City", "name": "Plainfield" },
       { "@type": "City", "name": "Naperville" },
+      { "@type": "City", "name": "Aurora" },
       { "@type": "City", "name": "Joliet" },
       { "@type": "City", "name": "Bolingbrook" },
       { "@type": "City", "name": "Romeoville" },
-      { "@type": "City", "name": "Shorewood" }
+      { "@type": "City", "name": "Oswego" },
+      { "@type": "City", "name": "Shorewood" },
+      { "@type": "City", "name": "Lockport" },
+      { "@type": "City", "name": "Orland Park" },
+      { "@type": "City", "name": "Tinley Park" },
+      { "@type": "City", "name": "Schaumburg" },
+      { "@type": "City", "name": "Downers Grove" },
+      { "@type": "City", "name": "Oak Park" },
+      { "@type": "AdministrativeArea", "name": "Will County, IL" },
+      { "@type": "AdministrativeArea", "name": "DuPage County, IL" },
+      { "@type": "AdministrativeArea", "name": "Cook County, IL" }
     ],
     "makesOffer": [
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Automotive Window Tinting" } },
@@ -103,6 +120,7 @@
       { "@type": "Question", "name": "How long does the installation take?", "acceptedAnswer": { "@type": "Answer", "text": "Most full-car tints take 2 to 4 hours. Paint protection film and ceramic coatings take longer and are usually a same-day or next-day turnaround. We'll give you an exact timeline when you book." } },
       { "@type": "Question", "name": "Does ceramic tint really block heat?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Our ceramic films reject a large share of the sun's infrared heat and over 99% of UV rays, so your car or room stays noticeably cooler and your interior is protected from fading — without a dark, mirrored look." } },
       { "@type": "Question", "name": "Do you offer a warranty?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — our premium films carry a lifetime warranty against bubbling, peeling, cracking and color change. If anything ever goes wrong with the film, we make it right." } },
+      { "@type": "Question", "name": "Do you come to me, or do I come to the shop?", "acceptedAnswer": { "@type": "Answer", "text": "Both. We offer mobile service across Chicagoland for many jobs and in-shop appointments in Plainfield. Tell us what's easiest and we'll make it work." } },
       { "@type": "Question", "name": "How soon can I get an appointment?", "acceptedAnswer": { "@type": "Answer", "text": "Usually within a few days. Send a free quote request or call 630-362-0909 and we'll get you on the schedule fast — including evening and weekend slots when available." } }
     ]
   }
@@ -121,18 +139,22 @@
       </a>
       <nav class="nav" aria-label="Primary">
         <a href="#services">Services</a>
+        <a href="#areas">Areas</a>
         <a href="#work">Work</a>
-        <a href="#about">About</a>
         <a href="#pricing">Pricing</a>
         <a href="#faq">FAQ</a>
       </nav>
       <a class="btn btn-primary btn-sm header-cta" href="#quote">Free quote</a>
+      <a class="header-call" href="tel:+16303620909" aria-label="Call Astro Tint at 630-362-0909">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
       <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-nav" id="mobileNav" hidden>
       <a href="#services">Services</a>
+      <a href="#areas">Service area</a>
       <a href="#work">Work</a>
       <a href="#about">About</a>
       <a href="#pricing">Pricing</a>
@@ -266,6 +288,72 @@
       </div>
     </section>
 
+    <!-- ===================== TINT & FILM OPTIONS (buyer's guide) ===================== -->
+    <section class="section" id="options">
+      <div class="container">
+        <header class="section-head reveal"><p class="kicker">Which film is right for you?</p><h2>Ceramic, carbon, PPF &amp; ceramic coating — explained.</h2><p class="section-sub">Every job is different. Here's the plain-English difference so you know exactly what you're paying for — and we'll always point you to what actually fits.</p></header>
+        <div class="options-grid">
+          <article class="card reveal">
+            <span class="option-tag">Best heat rejection</span>
+            <h3>Ceramic tint</h3>
+            <p>Top-tier nano-ceramic film that blocks the most infrared heat and 99%+ UV while staying optically clear — no signal interference, no mirrored look.</p>
+            <p class="option-best"><strong>Best for:</strong> drivers who want maximum heat rejection &amp; clarity.</p>
+          </article>
+          <article class="card reveal">
+            <span class="option-tag">Great value</span>
+            <h3>Carbon tint</h3>
+            <p>A durable, fade-resistant matte film with strong heat rejection at a friendlier price. Won't turn purple and won't interfere with your signals.</p>
+            <p class="option-best"><strong>Best for:</strong> a sharp look and solid performance on a budget.</p>
+          </article>
+          <article class="card reveal">
+            <span class="option-tag">Rock-chip armor</span>
+            <h3>Paint protection film (PPF)</h3>
+            <p>A clear, self-healing urethane layer over your paint that shields the hood, bumper and high-impact areas from rock chips, scratches and road rash.</p>
+            <p class="option-best"><strong>Best for:</strong> protecting new or repainted vehicles.</p>
+          </article>
+          <article class="card reveal">
+            <span class="option-tag">Gloss + easy clean</span>
+            <h3>Ceramic coating</h3>
+            <p>A liquid nano-coating that bonds to your paint for a deep, glossy finish, hydrophobic water-beading and easier washing — protection that lasts for years.</p>
+            <p class="option-best"><strong>Best for:</strong> a long-lasting shine that's easy to maintain.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICE AREA ===================== -->
+    <section class="section section-tint" id="areas">
+      <div class="container">
+        <header class="section-head reveal"><p class="kicker">Service area</p><h2>Serving Chicago &amp; all of Chicagoland.</h2><p class="section-sub">Based in Plainfield, we bring premium tint, PPF and ceramic coatings to drivers, homeowners and businesses across the Chicago metro — <strong>mobile &amp; in-shop</strong>.</p></header>
+        <ul class="area-grid reveal">
+          <li class="area-chip">Chicago</li>
+          <li class="area-chip">Plainfield</li>
+          <li class="area-chip">Naperville</li>
+          <li class="area-chip">Aurora</li>
+          <li class="area-chip">Joliet</li>
+          <li class="area-chip">Bolingbrook</li>
+          <li class="area-chip">Romeoville</li>
+          <li class="area-chip">Oswego</li>
+          <li class="area-chip">Shorewood</li>
+          <li class="area-chip">Lockport</li>
+          <li class="area-chip">Crest Hill</li>
+          <li class="area-chip">Orland Park</li>
+          <li class="area-chip">Tinley Park</li>
+          <li class="area-chip">Downers Grove</li>
+          <li class="area-chip">Oak Park</li>
+          <li class="area-chip">Cicero</li>
+          <li class="area-chip">Berwyn</li>
+          <li class="area-chip">Schaumburg</li>
+        </ul>
+        <p class="area-county reveal">Proudly covering Will, DuPage &amp; Cook County and the surrounding suburbs.</p>
+        <div class="area-foot reveal">
+          <span>Don&rsquo;t see your town? We travel — just ask.</span>
+          <a class="btn btn-primary btn-sm" href="#quote">Check my area</a>
+          <a class="area-call" href="tel:+16303620909">or call (630) 362-0909</a>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== WORK / PORTFOLIO (lightbox) ===================== -->
     <section class="section" id="work">
       <div class="container">
@@ -315,7 +403,18 @@
     <!-- ===================== REVIEWS (real written reviews) ===================== -->
     <section class="section" id="testimonials">
       <div class="container">
-        <header class="section-head center reveal"><p class="kicker">Reviews</p><h2>What Plainfield-area customers say.</h2><p class="section-sub">Real reviews from recent Astro Tint customers.</p></header>
+        <header class="section-head center reveal"><p class="kicker">Reviews</p><h2>What Chicagoland customers say.</h2><p class="section-sub">Real reviews from recent Astro Tint customers.</p></header>
+        <!-- Rating is corroborated 5.0 across Angi & other listings; once Seb confirms the
+             exact Google review count, add it here (e.g. "from 130+ Google reviews") and
+             add aggregateRating to the JSON-LD. -->
+        <div class="review-rating reveal">
+          <div class="review-rating-top">
+            <span class="review-rating-num">5.0</span>
+            <span class="rating-stars" aria-label="5 out of 5 stars">★★★★★</span>
+          </div>
+          <p class="review-rating-label">Rated 5 stars by Plainfield &amp; Chicagoland customers</p>
+          <a class="btn btn-ghost btn-sm" href="https://www.google.com/search?q=Astro+Tint+Solutions+Plainfield+reviews" target="_blank" rel="noopener">Read our reviews on Google</a>
+        </div>
         <ul class="reviews reveal">
           <li class="review">
             <div class="review-stars" aria-label="5 out of 5 stars">★★★★★</div>
@@ -349,6 +448,29 @@
       </div>
     </section>
 
+    <!-- ===================== COMPARISON ===================== -->
+    <section class="section" id="compare">
+      <div class="container">
+        <header class="section-head center reveal"><p class="kicker">Why it's worth it</p><h2>Astro Tint vs. the cheap tint shop.</h2><p class="section-sub">Tint is one of those things you buy once — or twice, if you go cheap. Here's the honest difference.</p></header>
+        <div class="compare-wrap reveal">
+          <table class="compare-table">
+            <thead>
+              <tr><th scope="col"></th><th scope="col">Budget tint shop</th><th scope="col" class="col-me">Astro Tint</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Film grade</th><td>Cheap dyed film</td><td class="col-me">Premium ceramic &amp; carbon</td></tr>
+              <tr><th scope="row">Heat &amp; UV rejection</th><td>Minimal</td><td class="col-me">High infrared + 99%+ UV</td></tr>
+              <tr><th scope="row">Warranty</th><td>Little or none</td><td class="col-me">Lifetime</td></tr>
+              <tr><th scope="row">Install quality</th><td>Rushed — bubbles &amp; peeling</td><td class="col-me">Hand-cut, bubble-free</td></tr>
+              <tr><th scope="row">Color stability</th><td>Fades &amp; turns purple</td><td class="col-me">Stays true for years</td></tr>
+              <tr><th scope="row">Turnaround</th><td>Unpredictable</td><td class="col-me">Same / next-day options</td></tr>
+              <tr><th scope="row">Real cost</th><td>Cheap now, redo later</td><td class="col-me">Honest price, done once</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <!-- ===================== PRICING ===================== -->
     <!-- NOTE TO COLTON: these are placeholder market-range starting prices so the
          page converts. Confirm the real numbers with Seb before the site goes live. -->
@@ -363,6 +485,22 @@
         <div class="guarantee reveal">
           <span class="guarantee-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 l7 3 v5 c0 4.5-3 7.5-7 9 c-4-1.5-7-4.5-7-9 V6 z"/><path d="M9 12 l2 2 l4-4"/></svg></span>
           <p><strong>Our lifetime guarantee:</strong> no bubbling, peeling, cracking or purple fade — ever. If the film fails, we re-do it free. Clean install, honest price, work that lasts.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section" id="faq">
+      <div class="container container-narrow">
+        <header class="section-head reveal"><p class="kicker">FAQ</p><h2>Good questions, straight answers.</h2></header>
+        <div class="faq-list reveal">
+          <details><summary>How much does window tinting cost?</summary><p>It depends on the vehicle or property and the film you choose. Most car tint jobs start around $179, and full-vehicle ceramic packages start around $349. Home and commercial jobs are quoted by the square footage. Every quote is free and no-pressure.</p></details>
+          <details><summary>Is window tint legal in Illinois?</summary><p>Yes — we install to Illinois tint law. In Illinois, front side windows must allow more than 35% of light through, and the windshield can have a non-reflective strip along the top. We&rsquo;ll explain the legal limits and recommend the darkest legal shade for your goals.</p></details>
+          <details><summary>How long does the installation take?</summary><p>Most full-car tints take 2 to 4 hours. Paint protection film and ceramic coatings take longer and are usually a same-day or next-day turnaround. We&rsquo;ll give you an exact timeline when you book.</p></details>
+          <details><summary>Does ceramic tint really block heat?</summary><p>Yes. Our ceramic films reject a large share of the sun&rsquo;s infrared heat and over 99% of UV rays, so your car or room stays noticeably cooler and your interior is protected from fading — without a dark, mirrored look.</p></details>
+          <details><summary>Do you offer a warranty?</summary><p>Yes — our premium films carry a lifetime warranty against bubbling, peeling, cracking and color change. If anything ever goes wrong with the film, we make it right.</p></details>
+          <details><summary>Do you come to me, or do I come to the shop?</summary><p>Both. We offer mobile service across Chicagoland for many jobs and in-shop appointments in Plainfield. Tell us what's easiest and we'll make it work.</p></details>
+          <details><summary>How soon can I get an appointment?</summary><p>Usually within a few days. Send a free quote request or call 630-362-0909 and we&rsquo;ll get you on the schedule fast — including evening and weekend slots when available.</p></details>
         </div>
       </div>
     </section>
@@ -404,10 +542,16 @@
     <section class="section section-dark" id="book">
       <div class="container book-inner">
         <header class="section-head center reveal"><p class="kicker light">Ready when you are</p><h2>Let&rsquo;s get your tint dialed in.</h2><p class="section-sub light">Call now to talk it through, or request your free quote and we&rsquo;ll take it from there.</p></header>
+        <!-- PROMO — CONFIRM EXACT OFFER WITH SEB before launch (or remove this block). -->
+        <div class="promo reveal">
+          <span class="promo-badge">New customers</span>
+          <span><strong>$25 off your first service</strong> — just mention this site.</span>
+        </div>
         <div class="booking-placeholder reveal">
           <p>Prefer to talk to a real person? Call or text the shop — we&rsquo;ll answer your questions and get you scheduled.</p>
           <a class="btn btn-primary btn-lg" href="tel:+16303620909">Call (630) 362-0909</a>
           <ul class="contact-row">
+            <li>🚗 Mobile &amp; in-shop across Chicagoland</li>
             <li>📍 22300 W Old Renwick Rd, Plainfield, IL 60544</li>
             <li>✉️ <a href="mailto:seb@astrotint.com">seb@astrotint.com</a></li>
           </ul>
@@ -420,20 +564,6 @@
       </div>
     </section>
 
-    <!-- ===================== FAQ ===================== -->
-    <section class="section" id="faq">
-      <div class="container container-narrow">
-        <header class="section-head reveal"><p class="kicker">FAQ</p><h2>Good questions, straight answers.</h2></header>
-        <div class="faq-list reveal">
-          <details><summary>How much does window tinting cost?</summary><p>It depends on the vehicle or property and the film you choose. Most car tint jobs start around $179, and full-vehicle ceramic packages start around $349. Home and commercial jobs are quoted by the square footage. Every quote is free and no-pressure.</p></details>
-          <details><summary>Is window tint legal in Illinois?</summary><p>Yes — we install to Illinois tint law. In Illinois, front side windows must allow more than 35% of light through, and the windshield can have a non-reflective strip along the top. We&rsquo;ll explain the legal limits and recommend the darkest legal shade for your goals.</p></details>
-          <details><summary>How long does the installation take?</summary><p>Most full-car tints take 2 to 4 hours. Paint protection film and ceramic coatings take longer and are usually a same-day or next-day turnaround. We&rsquo;ll give you an exact timeline when you book.</p></details>
-          <details><summary>Does ceramic tint really block heat?</summary><p>Yes. Our ceramic films reject a large share of the sun&rsquo;s infrared heat and over 99% of UV rays, so your car or room stays noticeably cooler and your interior is protected from fading — without a dark, mirrored look.</p></details>
-          <details><summary>Do you offer a warranty?</summary><p>Yes — our premium films carry a lifetime warranty against bubbling, peeling, cracking and color change. If anything ever goes wrong with the film, we make it right.</p></details>
-          <details><summary>How soon can I get an appointment?</summary><p>Usually within a few days. Send a free quote request or call 630-362-0909 and we&rsquo;ll get you on the schedule fast — including evening and weekend slots when available.</p></details>
-        </div>
-      </div>
-    </section>
   </main>
 
   <!-- ===================== FOOTER ===================== -->
