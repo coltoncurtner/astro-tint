@@ -47,20 +47,61 @@
     reveals.forEach(function (el) { el.classList.add("in"); });
   }
 
-  /* ---- Work showcase lightbox (no page redirect) ---- */
+  /* ---- Work gallery: category filter ---- */
+  var workFilters = document.querySelectorAll(".work-filter");
+  var workItems = Array.prototype.slice.call(document.querySelectorAll(".work-item"));
+  var workEmpty = document.querySelector(".work-empty");
+  if (workFilters.length && workItems.length) {
+    var applyFilter = function (cat) {
+      var shown = 0;
+      workItems.forEach(function (item) {
+        var match = cat === "all" || item.getAttribute("data-cat") === cat;
+        item.classList.toggle("is-hidden", !match);
+        if (match) shown++;
+      });
+      if (workEmpty) workEmpty.hidden = shown > 0;
+    };
+    workFilters.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        workFilters.forEach(function (b) {
+          b.classList.remove("is-active");
+          b.setAttribute("aria-pressed", "false");
+        });
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-pressed", "true");
+        applyFilter(btn.getAttribute("data-filter") || "all");
+      });
+    });
+  }
+
+  /* ---- Work gallery lightbox (photos, with prev/next) ---- */
   var lightbox = document.getElementById("lightbox");
   if (lightbox) {
     var lbBody = document.getElementById("lightboxBody");
     var lbTitle = document.getElementById("lightboxTitle");
     var lbTag = document.getElementById("lightboxTag");
     var lastFocused = null;
+    var allCards = Array.prototype.slice.call(document.querySelectorAll(".work-card"));
+    var galleryList = [];   // cards currently navigable (respects the active filter)
+    var galleryIndex = 0;
 
-    var openLightbox = function (card) {
-      lastFocused = card;
+    // Inject prev/next controls once.
+    var panel = lightbox.querySelector(".lightbox-panel");
+    var prevBtn = document.createElement("button");
+    var nextBtn = document.createElement("button");
+    prevBtn.type = nextBtn.type = "button";
+    prevBtn.className = "lightbox-nav lightbox-prev";
+    nextBtn.className = "lightbox-nav lightbox-next";
+    prevBtn.setAttribute("aria-label", "Previous photo");
+    nextBtn.setAttribute("aria-label", "Next photo");
+    prevBtn.innerHTML = "‹";
+    nextBtn.innerHTML = "›";
+    if (panel) { panel.appendChild(prevBtn); panel.appendChild(nextBtn); }
+
+    var renderCard = function (card) {
       var title = card.getAttribute("data-title") || "";
       var tag = card.getAttribute("data-tag") || "";
       var safeTitle = title.replace(/"/g, "&quot;");
-      // Priority: data-url (live iframe preview) → data-img (screenshot) → placeholder.
       var url = card.getAttribute("data-url");
       var img = card.getAttribute("data-img");
       lbTitle.innerHTML = title;
@@ -73,10 +114,34 @@
       } else {
         lbBody.innerHTML = '<div class="lightbox-ph"><strong>' + title + '</strong><span class="muted">Project photos coming soon</span></div>';
       }
+    };
+
+    var updateNav = function () {
+      var many = galleryList.length > 1;
+      prevBtn.hidden = nextBtn.hidden = !many;
+    };
+
+    var openLightbox = function (card) {
+      lastFocused = card;
+      // Navigate only within cards visible under the current filter.
+      galleryList = allCards.filter(function (c) {
+        var item = c.closest(".work-item");
+        return !item || !item.classList.contains("is-hidden");
+      });
+      galleryIndex = galleryList.indexOf(card);
+      if (galleryIndex < 0) { galleryList = [card]; galleryIndex = 0; }
+      renderCard(card);
+      updateNav();
       lightbox.hidden = false;
       document.body.style.overflow = "hidden";
       var closeBtn = lightbox.querySelector(".lightbox-close");
       if (closeBtn) closeBtn.focus();
+    };
+
+    var step = function (dir) {
+      if (galleryList.length < 2) return;
+      galleryIndex = (galleryIndex + dir + galleryList.length) % galleryList.length;
+      renderCard(galleryList[galleryIndex]);
     };
 
     var closeLightbox = function () {
@@ -86,14 +151,19 @@
       if (lastFocused) lastFocused.focus();
     };
 
-    document.querySelectorAll(".showcase-card").forEach(function (card) {
+    allCards.forEach(function (card) {
       card.addEventListener("click", function () { openLightbox(card); });
     });
+    prevBtn.addEventListener("click", function () { step(-1); });
+    nextBtn.addEventListener("click", function () { step(1); });
     lightbox.addEventListener("click", function (e) {
       if (e.target.getAttribute("data-close") === "true") closeLightbox();
     });
     document.addEventListener("keydown", function (e) {
-      if (e.key === "Escape" && !lightbox.hidden) closeLightbox();
+      if (lightbox.hidden) return;
+      if (e.key === "Escape") closeLightbox();
+      else if (e.key === "ArrowLeft") step(-1);
+      else if (e.key === "ArrowRight") step(1);
     });
   }
 
