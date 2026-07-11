@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://astrotintsolutions.netlify.app/sitemap.xml
+Sitemap: https://coltoncurtner.github.io/astro-tint/sitemap.xml
