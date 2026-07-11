@@ -246,9 +246,32 @@ p { margin: 0 0 1rem; }
 }
 .trust-strip strong { color: var(--navy); font-weight: 600; }
 
-/* hero visual — abstract brand graphic */
+/* hero visual — real install photo */
 .hero-visual { position: relative; display: flex; justify-content: center; }
-.hero-art { width: 100%; max-width: 440px; height: auto; display: block; }
+.hero-photo {
+  position: relative; margin: 0; width: 100%; max-width: 560px;
+  border-radius: var(--radius-lg); overflow: hidden;
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-lg), 0 0 0 1px var(--accent-glow);
+}
+.hero-photo img {
+  display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover;
+  object-position: center 52%;
+  background: var(--surface-2);
+}
+/* subtle cyan sheen + bottom scrim for the caption */
+.hero-photo::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(180deg, transparent 55%, rgba(8,11,17,0.72) 100%);
+}
+.hero-photo-tag {
+  position: absolute; left: 14px; bottom: 12px; z-index: 1;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 600; color: var(--head);
+  background: rgba(8,11,17,0.55); backdrop-filter: blur(6px);
+  padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line-strong);
+}
+.hero-photo-tag .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--red); }
 
 /* ============================================================
    Logo bar
@@ -266,6 +289,30 @@ p { margin: 0 0 1rem; }
   font-family: var(--font-display); font-weight: 500; font-size: 19px; color: var(--navy);
   opacity: 0.72;
 }
+
+/* ============================================================
+   Trusted-by strip (real, photo-backed client names)
+   ============================================================ */
+.trusted { padding: clamp(34px, 5vw, 52px) 0; text-align: center; }
+.trusted-label {
+  font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--muted); margin: 0 0 18px;
+}
+.trusted-list {
+  list-style: none; margin: 0 0 16px; padding: 0;
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+  gap: 12px 26px;
+}
+.trusted-list li {
+  font-family: var(--font-display); font-weight: 600; font-size: clamp(18px, 2.4vw, 26px);
+  color: var(--head); letter-spacing: -0.01em; position: relative;
+}
+.trusted-list li:not(:last-child)::after {
+  content: "·"; position: absolute; right: -16px; color: var(--red); opacity: 0.7;
+}
+.trusted-note { font-size: 15px; color: var(--ink-soft); margin: 0; }
+.trusted-note a { color: var(--red); font-weight: 600; text-decoration: none; }
+.trusted-note a:hover { text-decoration: underline; }
 
 /* ============================================================
    Section headers
@@ -317,6 +364,15 @@ p { margin: 0 0 1rem; }
   background: var(--red); color: #fff;
   font-size: 13px; font-weight: 600; letter-spacing: 0.02em;
   padding: 6px 14px; border-radius: 999px;
+}
+/* full-bleed photo header on service cards (offsets the card's padding) */
+.service-photo {
+  display: block; margin: -38px -34px 24px;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0; overflow: hidden;
+}
+.service-photo img {
+  display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover;
+  background: var(--surface-2);
 }
 .service-card h3 { font-size: 27px; margin-bottom: 8px; }
 .service-lead { color: var(--ink-soft); font-size: 17px; margin-bottom: 22px; }
@@ -557,6 +613,32 @@ p { margin: 0 0 1rem; }
 .footer-bottom .muted { color: rgba(245,241,233,0.4); }
 
 /* ============================================================
+   Recent projects band (photo proof strip)
+   ============================================================ */
+.projects-strip {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 8px;
+}
+.project-shot {
+  margin: 0; position: relative; border-radius: var(--radius-lg); overflow: hidden;
+  border: 1px solid var(--line); box-shadow: var(--shadow-sm); min-width: 0;
+}
+.project-shot img {
+  display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover;
+  background: var(--surface-2);
+}
+.project-shot figcaption {
+  position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 18px 16px;
+  display: flex; flex-direction: column; gap: 2px;
+  background: linear-gradient(180deg, transparent, rgba(8,11,17,0.86));
+}
+.project-shot figcaption strong { color: var(--head); font-size: 16px; }
+.project-shot figcaption span { color: var(--ink-soft); font-size: 13px; }
+.projects-cta { text-align: center; margin: 28px 0 0; }
+@media (max-width: 760px) {
+  .projects-strip { grid-template-columns: 1fr; gap: 14px; }
+}
+
+/* ============================================================
    Work gallery (filterable grid + lightbox)
    ============================================================ */
 .work-filters { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 24px; }
@@ -763,7 +845,7 @@ p { margin: 0 0 1rem; }
 @media (max-width: 980px) {
   .hero-grid { grid-template-columns: 1fr; }
   .hero-visual { order: 2; margin-top: 30px; }
-  .hero-art { max-width: 320px; }
+  .hero-photo { max-width: 100%; }
   .services-grid { grid-template-columns: 1fr; }
   .about-grid { grid-template-columns: 1fr; }
   .about-photo-frame { max-width: 340px; margin-inline: auto; }
