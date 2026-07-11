@@ -34,18 +34,18 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://astrotintsolutions.netlify.app/assets/og-image.png" />
 
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
 
   <!-- Fonts — Sora (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=3" />
+  <link rel="stylesheet" href="/css/styles.css?v=4" />
 
   <!-- Preload the hero image for a fast LCP -->
-  <link rel="preload" as="image" href="assets/hero.jpg" media="(min-width: 641px)" />
-  <link rel="preload" as="image" href="assets/hero-sm.jpg" media="(max-width: 640px)" />
+  <link rel="preload" as="image" href="/assets/hero.jpg" media="(min-width: 641px)" />
+  <link rel="preload" as="image" href="/assets/hero-sm.jpg" media="(max-width: 640px)" />
 
   <!-- ============================================================
        STRUCTURED DATA — real Astro Tint details (Plainfield local pack).
@@ -137,18 +137,18 @@
   <!-- ===================== HEADER ===================== -->
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="Astro Tint Solutions — home">
+      <a class="brand" href="/" aria-label="Astro Tint Solutions — home">
         <span class="brand-mark" aria-hidden="true">AT</span>
         <span class="brand-name">Astro Tint</span>
       </a>
       <nav class="nav" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#areas">Areas</a>
-        <a href="#work">Work</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
+        <a href="/services/">Services</a>
+        <a href="/#areas">Areas</a>
+        <a href="/#work">Work</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/#faq">FAQ</a>
       </nav>
-      <a class="btn btn-primary btn-sm header-cta" href="#quote">Free quote</a>
+      <a class="btn btn-primary btn-sm header-cta" href="/#quote">Free quote</a>
       <a class="header-call" href="tel:+16303620909" aria-label="Call Astro Tint at 630-362-0909">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       </a>
@@ -157,13 +157,13 @@
       </button>
     </div>
     <div class="mobile-nav" id="mobileNav" hidden>
-      <a href="#services">Services</a>
-      <a href="#areas">Service area</a>
-      <a href="#work">Work</a>
-      <a href="#about">About</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="#quote">Free quote</a>
+      <a href="/services/">Services</a>
+      <a href="/#areas">Service area</a>
+      <a href="/#work">Work</a>
+      <a href="/about/">About</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="/#faq">FAQ</a>
+      <a class="btn btn-primary" href="/#quote">Free quote</a>
     </div>
   </header>
 
@@ -193,8 +193,8 @@
         <div class="hero-visual reveal">
           <figure class="hero-photo">
             <picture>
-              <source media="(max-width: 640px)" srcset="assets/hero-sm.jpg" />
-              <img src="assets/hero.jpg" alt="Tesla Cybertruck with ceramic window tint at Astro Tint Solutions in Plainfield, IL" fetchpriority="high" decoding="async" />
+              <source media="(max-width: 640px)" srcset="/assets/hero-sm.jpg" />
+              <img src="/assets/hero.jpg" alt="Tesla Cybertruck with ceramic window tint at Astro Tint Solutions in Plainfield, IL" fetchpriority="high" decoding="async" />
             </picture>
             <figcaption class="hero-photo-tag"><span class="dot" aria-hidden="true"></span> Ceramic tint · in our Plainfield shop</figcaption>
           </figure>
@@ -257,33 +257,33 @@
         <header class="section-head reveal"><p class="kicker">What we do</p><h2>One shop for tint, protection &amp; coatings.</h2><p class="section-sub">From a daily driver to a storefront, Astro Tint handles the whole job with premium film and a meticulous, hand-finished install.</p></header>
         <div class="services-grid">
           <article class="service-card featured reveal">
-            <span class="service-photo"><img src="assets/work/auto-03-thumb.jpg" alt="Ford Mustang GT with ceramic automotive window tint" loading="lazy" decoding="async" /></span>
+            <span class="service-photo"><img src="/assets/work/auto-03-thumb.jpg" alt="Ford Mustang GT with ceramic automotive window tint" loading="lazy" decoding="async" /></span>
             <span class="badge">Most requested</span>
             <h3>Automotive Window Tint</h3>
             <p class="service-lead">Heat-blocking ceramic tint for cars, trucks &amp; SUVs.</p>
             <ul class="ticks"><li>Premium ceramic &amp; carbon films</li><li>Rejects heat, glare &amp; 99%+ UV</li><li>Cut to your exact glass — clean edges</li><li>Installed to Illinois tint law</li></ul>
-            <a class="btn btn-primary" href="#quote">Get my quote</a>
+            <a class="btn btn-primary" href="/car-tint/">Automotive tint details</a>
           </article>
           <article class="service-card reveal">
-            <span class="service-photo"><img src="assets/work/ppf-01-thumb.jpg" alt="Paint protection film being applied to a Lucid Air" loading="lazy" decoding="async" /></span>
+            <span class="service-photo"><img src="/assets/work/ppf-01-thumb.jpg" alt="Paint protection film being applied to a Lucid Air" loading="lazy" decoding="async" /></span>
             <h3>Paint Protection &amp; Ceramic Coating</h3>
             <p class="service-lead">Invisible armor and a deep, easy-clean shine.</p>
             <ul class="ticks"><li>PPF for hoods, bumpers &amp; high-impact areas</li><li>Self-healing, virtually invisible film</li><li>Ceramic coating for gloss &amp; protection</li><li>Guards against chips, swirls &amp; stains</li></ul>
-            <a class="btn btn-ghost" href="#quote">Ask about protection</a>
+            <a class="btn btn-ghost" href="/ppf-applications/">Protection &amp; coatings</a>
           </article>
           <article class="service-card reveal">
-            <span class="service-photo"><img src="assets/work/home-01-thumb.jpg" alt="Residential arched feature window with home tint" loading="lazy" decoding="async" /></span>
+            <span class="service-photo"><img src="/assets/work/home-01-thumb.jpg" alt="Residential arched feature window with home tint" loading="lazy" decoding="async" /></span>
             <h3>Residential Window Tint</h3>
             <p class="service-lead">Cooler, more private, more comfortable rooms.</p>
             <ul class="ticks"><li>Cuts heat, glare &amp; hot spots at home</li><li>Daytime privacy without losing the view</li><li>Protects floors &amp; furniture from fading</li><li>Energy-saving films for sunny rooms</li></ul>
-            <a class="btn btn-ghost" href="#quote">Tint my home</a>
+            <a class="btn btn-ghost" href="/residential-tint/">Home tint details</a>
           </article>
           <article class="service-card reveal">
-            <span class="service-photo"><img src="assets/work/comm-01-thumb.jpg" alt="Planet Fitness storefront windows tinted by Astro Tint" loading="lazy" decoding="async" /></span>
+            <span class="service-photo"><img src="/assets/work/comm-01-thumb.jpg" alt="Planet Fitness storefront windows tinted by Astro Tint" loading="lazy" decoding="async" /></span>
             <h3>Commercial &amp; Office Tint</h3>
             <p class="service-lead">Better-looking, lower-cost storefronts &amp; offices.</p>
             <ul class="ticks"><li>Storefronts, offices &amp; buildings</li><li>Lower cooling bills &amp; happier staff</li><li>Privacy, branding &amp; security films</li><li>Minimal-disruption scheduling</li></ul>
-            <a class="btn btn-ghost" href="#quote">Get a building quote</a>
+            <a class="btn btn-ghost" href="/commercial-buildings/">Commercial tint details</a>
           </article>
         </div>
         <p class="services-note reveal">Not sure what you need? <strong>Tell us your vehicle or space</strong> and we'll recommend the right film — free.</p>
@@ -295,9 +295,9 @@
       <div class="container">
         <header class="section-head reveal"><p class="kicker">On the bench lately</p><h2>Real installs, real Chicagoland jobs.</h2></header>
         <div class="projects-strip reveal">
-          <figure class="project-shot"><img src="assets/work/auto-01.jpg" alt="White Audi RS6 Avant with full ceramic window tint" loading="lazy" decoding="async" /><figcaption><strong>Full ceramic tint</strong><span>Audi RS6 Avant · Automotive</span></figcaption></figure>
-          <figure class="project-shot"><img src="assets/work/comm-02.jpg" alt="Raising Cane's restaurant storefront with tinted windows" loading="lazy" decoding="async" /><figcaption><strong>Storefront heat &amp; glare film</strong><span>Raising Cane's · Commercial</span></figcaption></figure>
-          <figure class="project-shot"><img src="assets/work/home-03.jpg" alt="Residential brick home with a tinted arched feature window" loading="lazy" decoding="async" /><figcaption><strong>Home glare &amp; UV control</strong><span>Feature window · Residential</span></figcaption></figure>
+          <figure class="project-shot"><img src="/assets/work/auto-01.jpg" alt="White Audi RS6 Avant with full ceramic window tint" loading="lazy" decoding="async" /><figcaption><strong>Full ceramic tint</strong><span>Audi RS6 Avant · Automotive</span></figcaption></figure>
+          <figure class="project-shot"><img src="/assets/work/comm-02.jpg" alt="Raising Cane's restaurant storefront with tinted windows" loading="lazy" decoding="async" /><figcaption><strong>Storefront heat &amp; glare film</strong><span>Raising Cane's · Commercial</span></figcaption></figure>
+          <figure class="project-shot"><img src="/assets/work/home-03.jpg" alt="Residential brick home with a tinted arched feature window" loading="lazy" decoding="async" /><figcaption><strong>Home glare &amp; UV control</strong><span>Feature window · Residential</span></figcaption></figure>
         </div>
         <p class="projects-cta reveal"><a class="btn btn-ghost" href="#work">See the full gallery</a></p>
       </div>
@@ -381,31 +381,31 @@
           <button class="work-filter" type="button" data-filter="commercial" aria-pressed="false">Commercial</button>
         </div>
         <ul class="work-grid reveal">
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Full ceramic tint — Audi RS6 Avant" data-tag="Automotive" data-img="assets/work/auto-01.jpg"><img src="assets/work/auto-01-thumb.jpg" alt="White Audi RS6 Avant with fresh ceramic window tint at Astro Tint's shop" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Audi RS6 Avant</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Storefront heat &amp; glare film — Planet Fitness" data-tag="Commercial" data-img="assets/work/comm-01.jpg"><img src="assets/work/comm-01-thumb.jpg" alt="Planet Fitness storefront windows tinted by Astro Tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Planet Fitness</strong><span>Commercial</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Tesla Cybertruck" data-tag="Automotive" data-img="assets/work/auto-02.jpg"><img src="assets/work/auto-02-thumb.jpg" alt="Tesla Cybertruck with ceramic window tint in the Astro Tint shop" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Tesla Cybertruck</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Home window tint — arched feature window" data-tag="Residential" data-img="assets/work/home-01.jpg"><img src="assets/work/home-01-thumb.jpg" alt="Residential arched feature window with tint on a brick home" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Arched home window</strong><span>Residential</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Ford Mustang GT" data-tag="Automotive" data-img="assets/work/auto-03.jpg"><img src="assets/work/auto-03-thumb.jpg" alt="Grey Ford Mustang GT with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Ford Mustang GT</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="ppf"><button class="work-card" type="button" data-title="Paint protection film — Lucid Air" data-tag="Paint protection" data-img="assets/work/ppf-01.jpg"><img src="assets/work/ppf-01-thumb.jpg" alt="Paint protection film being installed on a white Lucid Air" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Lucid Air — PPF</strong><span>Paint protection</span></span></button></li>
-          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Restaurant storefront tint — Raising Cane's" data-tag="Commercial" data-img="assets/work/comm-02.jpg"><img src="assets/work/comm-02-thumb.jpg" alt="Raising Cane's restaurant storefront with tinted windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Raising Cane's</strong><span>Commercial</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — GMC Hummer EV" data-tag="Automotive" data-img="assets/work/auto-04.jpg"><img src="assets/work/auto-04-thumb.jpg" alt="Black GMC Hummer EV with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>GMC Hummer EV</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Residential glare control" data-tag="Residential" data-img="assets/work/home-02.jpg"><img src="assets/work/home-02-thumb.jpg" alt="Arched residential window with glare-control film on a shingled home" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Home glare control</strong><span>Residential</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Jeep Grand Cherokee Trackhawk" data-tag="Automotive" data-img="assets/work/auto-05.jpg"><img src="assets/work/auto-05-thumb.jpg" alt="Grey Jeep Grand Cherokee Trackhawk with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Jeep Trackhawk</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Retail storefront tint — Boot Barn" data-tag="Commercial" data-img="assets/work/comm-03.jpg"><img src="assets/work/comm-03-thumb.jpg" alt="Boot Barn retail storefront with tinted windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Boot Barn</strong><span>Commercial</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Subaru WRX" data-tag="Automotive" data-img="assets/work/auto-06.jpg"><img src="assets/work/auto-06-thumb.jpg" alt="Blue Subaru WRX with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Subaru WRX</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="ppf"><button class="work-card" type="button" data-title="Paint protection &amp; tint — Rivian R1S" data-tag="Paint protection" data-img="assets/work/ppf-03.jpg"><img src="assets/work/ppf-03-thumb.jpg" alt="Green Rivian R1S at the Astro Tint protection bay" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Rivian R1S</strong><span>Paint protection</span></span></button></li>
-          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Home window tint — feature window" data-tag="Residential" data-img="assets/work/home-03.jpg"><img src="assets/work/home-03-thumb.jpg" alt="Arched feature window with residential tint on a brick home" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Feature window</strong><span>Residential</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Alfa Romeo Stelvio" data-tag="Automotive" data-img="assets/work/auto-07.jpg"><img src="assets/work/auto-07-thumb.jpg" alt="Black Alfa Romeo Stelvio with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Alfa Romeo Stelvio</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Restaurant storefront tint — Mama Maria's" data-tag="Commercial" data-img="assets/work/comm-04.jpg"><img src="assets/work/comm-04-thumb.jpg" alt="Mama Maria's Taco &amp; Tequila Bar storefront with tinted windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Mama Maria's</strong><span>Commercial</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — BMW 3 Series" data-tag="Automotive" data-img="assets/work/auto-08.jpg"><img src="assets/work/auto-08-thumb.jpg" alt="Black BMW 3 Series with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>BMW 3 Series</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Entry &amp; sidelight privacy film" data-tag="Residential" data-img="assets/work/home-04.jpg"><img src="assets/work/home-04-thumb.jpg" alt="Residential front entry door and sidelights with privacy film" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Entry &amp; sidelights</strong><span>Residential</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Cadillac CT5-V" data-tag="Automotive" data-img="assets/work/auto-09.jpg"><img src="assets/work/auto-09-thumb.jpg" alt="Light blue Cadillac CT5-V with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Cadillac CT5-V</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="ppf"><button class="work-card" type="button" data-title="Paint protection film — Lucid Air" data-tag="Paint protection" data-img="assets/work/ppf-02.jpg"><img src="assets/work/ppf-02-thumb.jpg" alt="White Lucid Air protected with paint protection film" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Lucid Air — PPF</strong><span>Paint protection</span></span></button></li>
-          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Commercial storefront tint — car wash" data-tag="Commercial" data-img="assets/work/comm-05.jpg"><img src="assets/work/comm-05-thumb.jpg" alt="Car wash building storefront with tinted windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Car wash storefront</strong><span>Commercial</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Classic ceramic tint — Pontiac Firebird" data-tag="Automotive" data-img="assets/work/auto-10.jpg"><img src="assets/work/auto-10-thumb.jpg" alt="Red Pontiac Firebird with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Pontiac Firebird</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Home window tint — tall windows" data-tag="Residential" data-img="assets/work/home-05.jpg"><img src="assets/work/home-05-thumb.jpg" alt="Two-story grey brick home with tinted tall windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Tall home windows</strong><span>Residential</span></span></button></li>
-          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Ford F-150 Raptor" data-tag="Automotive" data-img="assets/work/auto-11.jpg"><img src="assets/work/auto-11-thumb.jpg" alt="Ford F-150 Raptor with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Ford Raptor</strong><span>Automotive</span></span></button></li>
-          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Office privacy &amp; branding film" data-tag="Commercial" data-img="assets/work/comm-06.jpg"><img src="assets/work/comm-06-thumb.jpg" alt="Branded frosted glass office partition with privacy film" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Office privacy film</strong><span>Commercial</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Full ceramic tint — Audi RS6 Avant" data-tag="Automotive" data-img="/assets/work/auto-01.jpg"><img src="/assets/work/auto-01-thumb.jpg" alt="White Audi RS6 Avant with fresh ceramic window tint at Astro Tint's shop" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Audi RS6 Avant</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Storefront heat &amp; glare film — Planet Fitness" data-tag="Commercial" data-img="/assets/work/comm-01.jpg"><img src="/assets/work/comm-01-thumb.jpg" alt="Planet Fitness storefront windows tinted by Astro Tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Planet Fitness</strong><span>Commercial</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Tesla Cybertruck" data-tag="Automotive" data-img="/assets/work/auto-02.jpg"><img src="/assets/work/auto-02-thumb.jpg" alt="Tesla Cybertruck with ceramic window tint in the Astro Tint shop" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Tesla Cybertruck</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Home window tint — arched feature window" data-tag="Residential" data-img="/assets/work/home-01.jpg"><img src="/assets/work/home-01-thumb.jpg" alt="Residential arched feature window with tint on a brick home" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Arched home window</strong><span>Residential</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Ford Mustang GT" data-tag="Automotive" data-img="/assets/work/auto-03.jpg"><img src="/assets/work/auto-03-thumb.jpg" alt="Grey Ford Mustang GT with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Ford Mustang GT</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="ppf"><button class="work-card" type="button" data-title="Paint protection film — Lucid Air" data-tag="Paint protection" data-img="/assets/work/ppf-01.jpg"><img src="/assets/work/ppf-01-thumb.jpg" alt="Paint protection film being installed on a white Lucid Air" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Lucid Air — PPF</strong><span>Paint protection</span></span></button></li>
+          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Restaurant storefront tint — Raising Cane's" data-tag="Commercial" data-img="/assets/work/comm-02.jpg"><img src="/assets/work/comm-02-thumb.jpg" alt="Raising Cane's restaurant storefront with tinted windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Raising Cane's</strong><span>Commercial</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — GMC Hummer EV" data-tag="Automotive" data-img="/assets/work/auto-04.jpg"><img src="/assets/work/auto-04-thumb.jpg" alt="Black GMC Hummer EV with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>GMC Hummer EV</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Residential glare control" data-tag="Residential" data-img="/assets/work/home-02.jpg"><img src="/assets/work/home-02-thumb.jpg" alt="Arched residential window with glare-control film on a shingled home" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Home glare control</strong><span>Residential</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Jeep Grand Cherokee Trackhawk" data-tag="Automotive" data-img="/assets/work/auto-05.jpg"><img src="/assets/work/auto-05-thumb.jpg" alt="Grey Jeep Grand Cherokee Trackhawk with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Jeep Trackhawk</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Retail storefront tint — Boot Barn" data-tag="Commercial" data-img="/assets/work/comm-03.jpg"><img src="/assets/work/comm-03-thumb.jpg" alt="Boot Barn retail storefront with tinted windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Boot Barn</strong><span>Commercial</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Subaru WRX" data-tag="Automotive" data-img="/assets/work/auto-06.jpg"><img src="/assets/work/auto-06-thumb.jpg" alt="Blue Subaru WRX with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Subaru WRX</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="ppf"><button class="work-card" type="button" data-title="Paint protection &amp; tint — Rivian R1S" data-tag="Paint protection" data-img="/assets/work/ppf-03.jpg"><img src="/assets/work/ppf-03-thumb.jpg" alt="Green Rivian R1S at the Astro Tint protection bay" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Rivian R1S</strong><span>Paint protection</span></span></button></li>
+          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Home window tint — feature window" data-tag="Residential" data-img="/assets/work/home-03.jpg"><img src="/assets/work/home-03-thumb.jpg" alt="Arched feature window with residential tint on a brick home" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Feature window</strong><span>Residential</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Alfa Romeo Stelvio" data-tag="Automotive" data-img="/assets/work/auto-07.jpg"><img src="/assets/work/auto-07-thumb.jpg" alt="Black Alfa Romeo Stelvio with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Alfa Romeo Stelvio</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Restaurant storefront tint — Mama Maria's" data-tag="Commercial" data-img="/assets/work/comm-04.jpg"><img src="/assets/work/comm-04-thumb.jpg" alt="Mama Maria's Taco &amp; Tequila Bar storefront with tinted windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Mama Maria's</strong><span>Commercial</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — BMW 3 Series" data-tag="Automotive" data-img="/assets/work/auto-08.jpg"><img src="/assets/work/auto-08-thumb.jpg" alt="Black BMW 3 Series with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>BMW 3 Series</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Entry &amp; sidelight privacy film" data-tag="Residential" data-img="/assets/work/home-04.jpg"><img src="/assets/work/home-04-thumb.jpg" alt="Residential front entry door and sidelights with privacy film" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Entry &amp; sidelights</strong><span>Residential</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Cadillac CT5-V" data-tag="Automotive" data-img="/assets/work/auto-09.jpg"><img src="/assets/work/auto-09-thumb.jpg" alt="Light blue Cadillac CT5-V with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Cadillac CT5-V</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="ppf"><button class="work-card" type="button" data-title="Paint protection film — Lucid Air" data-tag="Paint protection" data-img="/assets/work/ppf-02.jpg"><img src="/assets/work/ppf-02-thumb.jpg" alt="White Lucid Air protected with paint protection film" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Lucid Air — PPF</strong><span>Paint protection</span></span></button></li>
+          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Commercial storefront tint — car wash" data-tag="Commercial" data-img="/assets/work/comm-05.jpg"><img src="/assets/work/comm-05-thumb.jpg" alt="Car wash building storefront with tinted windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Car wash storefront</strong><span>Commercial</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Classic ceramic tint — Pontiac Firebird" data-tag="Automotive" data-img="/assets/work/auto-10.jpg"><img src="/assets/work/auto-10-thumb.jpg" alt="Red Pontiac Firebird with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Pontiac Firebird</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="home"><button class="work-card" type="button" data-title="Home window tint — tall windows" data-tag="Residential" data-img="/assets/work/home-05.jpg"><img src="/assets/work/home-05-thumb.jpg" alt="Two-story grey brick home with tinted tall windows" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Tall home windows</strong><span>Residential</span></span></button></li>
+          <li class="work-item" data-cat="auto"><button class="work-card" type="button" data-title="Ceramic tint — Ford F-150 Raptor" data-tag="Automotive" data-img="/assets/work/auto-11.jpg"><img src="/assets/work/auto-11-thumb.jpg" alt="Ford F-150 Raptor with ceramic window tint" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Ford Raptor</strong><span>Automotive</span></span></button></li>
+          <li class="work-item" data-cat="commercial"><button class="work-card" type="button" data-title="Office privacy &amp; branding film" data-tag="Commercial" data-img="/assets/work/comm-06.jpg"><img src="/assets/work/comm-06-thumb.jpg" alt="Branded frosted glass office partition with privacy film" loading="lazy" decoding="async" /><span class="work-card-meta"><strong>Office privacy film</strong><span>Commercial</span></span></button></li>
         </ul>
         <p class="work-empty muted" hidden>No photos in this category yet — <a href="#quote">ask us about your project</a>.</p>
       </div>
@@ -423,7 +423,7 @@
     <section class="section section-tint" id="about">
       <div class="container about-grid">
         <div class="about-photo-frame reveal">
-          <img class="about-photo" src="assets/about.jpg" alt="The Astro Tint Solutions team in Plainfield, IL" loading="lazy" decoding="async"
+          <img class="about-photo" src="/assets/about.jpg" alt="The Astro Tint Solutions team in Plainfield, IL" loading="lazy" decoding="async"
                onerror="this.style.display='none';document.getElementById('aboutPhotoFallback').style.display='flex';" />
           <div class="about-photo about-photo--placeholder" id="aboutPhotoFallback" aria-hidden="true" style="display:none">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="9" r="3.5"/><path d="M5 20 c0-3.9 3.1-7 7-7 s7 3.1 7 7"/></svg>
@@ -550,7 +550,7 @@
       <div class="container">
         <div class="teardown reveal">
           <div class="teardown-copy"><p class="kicker">Free quote</p><h2>Get your free tint quote.</h2><p>Tell us a little about your vehicle, home or business and we'll get back to you fast with a no-pressure price. No spam, no hard sell — just a straight answer.</p></div>
-          <form class="teardown-form" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="thanks.html">
+          <form class="teardown-form" name="quote" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
             <input type="hidden" name="form-name" value="quote" />
             <p class="hp"><label>Don&rsquo;t fill this out: <input name="bot-field" /></label></p>
             <label for="q-name">Name</label>
@@ -610,12 +610,13 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">AT</span><span class="brand-name">Astro Tint</span></a>
+        <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">AT</span><span class="brand-name">Astro Tint</span></a>
         <p>Premium window tint, paint protection &amp; ceramic coatings for cars, homes &amp; businesses in Plainfield, IL.</p>
-        <a class="btn btn-primary btn-sm" href="#quote">Get a free quote</a>
+        <a class="btn btn-primary btn-sm" href="/#quote">Get a free quote</a>
       </div>
       <nav class="footer-nav" aria-label="Footer">
-        <div><h4>Explore</h4><a href="#services">Services</a><a href="#work">Work</a><a href="#about">About</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a></div>
+        <div><h4>Services</h4><a href="/car-tint/">Automotive tint</a><a href="/ppf-applications/">Paint protection film</a><a href="/ceramic-coatings/">Ceramic coating</a><a href="/residential-tint/">Residential tint</a><a href="/commercial-buildings/">Commercial tint</a><a href="/office-tint/">Office tint</a></div>
+        <div><h4>Explore</h4><a href="/services/">All services</a><a href="/#work">Work</a><a href="/about/">About</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/contact/">Contact</a></div>
         <div><h4>Get in touch</h4><a href="tel:+16303620909">(630) 362-0909</a><a href="mailto:seb@astrotint.com">seb@astrotint.com</a><a href="https://www.facebook.com/astrotintservices" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com/astrotintsolutions/" target="_blank" rel="noopener">Instagram</a></div>
       </nav>
     </div>
@@ -626,6 +627,6 @@
   </footer>
 
   <div class="mobile-cta" id="mobileCta"><a class="btn btn-primary" href="#quote">Get my free quote</a></div>
-  <script src="js/main.js?v=2" defer></script>
+  <script src="/js/main.js?v=2" defer></script>
 </body>
 </html>
