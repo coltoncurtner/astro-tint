@@ -16,46 +16,52 @@
      Swap every value to the client's brand. Keep --ink/--muted/--white.
      These are NEUTRAL defaults — never ship them as-is.
      ============================================================ */
-  /* ASTRO TINT — dark premium "glass" theme.
-     Historical names kept so the universal components keep working; ROLES are
-     re-pointed for a dark UI. A DARK-ADAPTATION LAYER at the very bottom of this
-     file re-points the few selectors that hardcoded light-on-light (#fff
-     surfaces, heading/brand/nav text, buttons) — that's the only structural
-     change from the starter. */
-  --navy:        #121821;   /* dark glass surface: brand-mark, skip-link, teardown, avatar */
-  --navy-deep:   #080B11;   /* deepest: dark sections + footer */
-  --red:         #38BDF8;   /* ACCENT — glassy sky-cyan (CTAs, highlights) */
-  --red-dark:    #0EA5E9;   /* accent hover / deeper cyan */
-  --red-tint:    rgba(56, 189, 248, 0.14);  /* translucent cyan: eyebrow/badge/tick bg */
-  --blue:        #7DD3FC;   /* secondary light cyan (icon glyphs) */
-  --blue-tint:   rgba(125, 211, 252, 0.12); /* icon-chip background */
-  --bone:        #E8EEF6;   /* LIGHT text used on dark sections (do NOT darken) */
-  --bone-2:      #0F151E;   /* tinted (elevated) dark section background */
-  --ink:         #CBD6E3;   /* primary body text (light on dark) */
-  --ink-soft:    #9DAEC1;   /* secondary text */
-  --muted:       #74859A;   /* faint text */
+  /* ASTRO TINT — "Smoked Chrome / Liquid Mesquite" upscale Y2K desert-luxe theme.
+     Warm LIGHT "desert bone" base with smoked-mesquite char anchors + bronze/gold
+     accents. Historical names kept so the universal components keep working; ROLES
+     are re-pointed. A WARM-LUXE ADAPTATION LAYER at the very bottom of this file
+     re-points surfaces/text and adds the Y2K gloss (chrome logotype, gel buttons,
+     iridescent tinted-glass sheens). */
+  --navy:        #2A1D12;   /* smoked-mesquite char: dark bands, footer, quote panel, avatar */
+  --navy-deep:   #1A110A;   /* deepest charred espresso: footer / deepest dark bands */
+  --red:         #A66A2E;   /* ACCENT — bronze (CTA bg, highlights) */
+  --red-dark:    #86521F;   /* accent hover + small accent text (AA on bone) */
+  --red-tint:    rgba(166, 106, 46, 0.12);  /* translucent bronze: eyebrow/badge/tick bg */
+  --blue:        #C79A4C;   /* secondary — burnished gold (icon glyphs) */
+  --blue-tint:   rgba(199, 154, 76, 0.16);  /* gold icon-chip background */
+  --bone:        #F3EADB;   /* LIGHT text used on the dark char bands (do NOT darken) */
+  --bone-2:      #E9DCC7;   /* tinted (warm sand) section background */
+  --ink:         #3E3123;   /* primary body text (warm espresso) */
+  --ink-soft:    #6E5B46;   /* secondary text */
+  --muted:       #9C8A70;   /* faint text */
   --white:       #FFFFFF;
-  --line:        rgba(150, 185, 225, 0.12);
-  --line-strong: rgba(150, 185, 225, 0.24);
+  --line:        rgba(90, 60, 28, 0.14);
+  --line-strong: rgba(90, 60, 28, 0.28);
 
-  /* Dark-theme additions */
-  --bg:          #0A0E15;   /* page background (near-black, faint blue) */
-  --surface:     #131A25;   /* card / glass surface */
-  --surface-2:   #1A2331;   /* elevated / hover surface */
-  --head:        #F2F7FD;   /* headings + strong text */
-  --accent-glow: rgba(56, 189, 248, 0.16);
+  /* Light desert-bone base */
+  --bg:          #F3EADB;   /* page background (warm desert bone) */
+  --surface:     #FCF8F1;   /* card / warm-white glass surface */
+  --surface-2:   #F4EBDC;   /* elevated / hover surface */
+  --head:        #241811;   /* headings + strong text (near-char) */
+  --accent-glow: rgba(166, 106, 46, 0.18);
 
-  /* Type — geometric grotesk display + Inter body (modern automotive feel). */
-  --font-display: "Sora", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  /* Y2K gloss — chrome logotype, iridescent tinted glass, gel-button highlight */
+  --chrome-bronze: linear-gradient(180deg, #F0DBB4 0%, #B07C3E 30%, #7A4E22 52%, #C89A5A 74%, #F0DBB4 100%);
+  --iridescent:    linear-gradient(115deg, rgba(255,214,153,0.35), rgba(226,142,168,0.30), rgba(150,196,214,0.30), rgba(198,160,220,0.32));
+  --gloss-top:     linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0) 55%);
+
+  /* Type — luxe high-contrast serif display + Western wood-type accent + Inter body. */
+  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-western: "Rye", "Fraunces", Georgia, serif;
   --font-sans:    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
   /* Layout */
   --container: 1140px;
   --radius:    14px;
   --radius-lg: 22px;
-  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.30);
-  --shadow-md: 0 22px 48px -20px rgba(0, 0, 0, 0.62);
-  --shadow-lg: 0 44px 90px -30px rgba(0, 0, 0, 0.72);
+  --shadow-sm: 0 2px 10px rgba(70, 45, 20, 0.10);
+  --shadow-md: 0 22px 48px -22px rgba(70, 45, 20, 0.24);
+  --shadow-lg: 0 44px 90px -30px rgba(70, 45, 20, 0.30);
   --ease:      cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -259,10 +265,14 @@ p { margin: 0 0 1rem; }
   object-position: center 52%;
   background: var(--surface-2);
 }
-/* subtle cyan sheen + bottom scrim for the caption */
+/* Y2K iridescent tinted-glass sheen + warm scrim (also harmonizes the photo's
+   cool cast toward the desert-luxe palette) */
 .hero-photo::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
-  background: linear-gradient(180deg, transparent 55%, rgba(8,11,17,0.72) 100%);
+  background:
+    linear-gradient(155deg, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0) 22%),
+    linear-gradient(115deg, rgba(255,214,153,0.20), rgba(226,142,168,0.14), rgba(150,196,214,0.12), rgba(198,160,220,0.16)),
+    linear-gradient(180deg, rgba(42,29,18,0.05) 45%, rgba(26,17,10,0.78) 100%);
 }
 .hero-photo-tag {
   position: absolute; left: 14px; bottom: 12px; z-index: 1;
@@ -911,55 +921,80 @@ p { margin: 0 0 1rem; }
 }
 
 /* ============================================================
-   ASTRO TINT — DARK-ADAPTATION LAYER
-   The starter components were authored light-on-bone and hardcode a few
-   #fff surfaces + dark-on-light text colors. This block (loaded last, so it
-   wins by source order) re-points exactly those surfaces/text for the dark
-   "glass" UI. Structure is untouched — only color/surface adaptation.
+   ASTRO TINT — WARM-LUXE ADAPTATION LAYER  ("Smoked Chrome / Liquid Mesquite")
+   The starter components were authored light-on-bone; this block (loaded last,
+   so it wins by source order) re-points surfaces/text for the warm LIGHT
+   "desert bone" theme and layers on the Balanced Y2K gloss: chrome logotype,
+   glossy gel buttons, iridescent tinted-glass sheens, gold metallic hairlines.
+   A few smoked-char bands (footer, dark CTA bands, quote panel) stay dark as
+   dramatic contrast anchors, recolored bronze/gold. Structure is untouched.
    ============================================================ */
 
 /* page + global text */
 body { background: var(--bg); color: var(--ink); }
 h1, h2, h3, h4 { color: var(--head); }
-.accent { color: var(--red); }
+.accent { color: var(--red-dark); }
 .section-tint { background: var(--bone-2); }
 
-/* faint top/bottom glow behind hero */
-.hero::before {
-  background:
-    radial-gradient(58% 70% at 82% -5%, rgba(56,189,248,0.20), transparent 60%),
-    radial-gradient(48% 60% at -5% 105%, rgba(125,211,252,0.10), transparent 55%);
+/* Y2K liquid-chrome on the large hero phrase (reads best at display size) */
+.hero h1 .accent {
+  background: var(--chrome-bronze);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.35);
 }
 
-/* header — dark glass */
+/* faint warm glow behind hero */
+.hero::before {
+  background:
+    radial-gradient(58% 70% at 82% -5%, rgba(199,154,76,0.28), transparent 60%),
+    radial-gradient(48% 60% at -5% 105%, rgba(166,106,46,0.14), transparent 55%);
+}
+
+/* header — warm bone glass */
 .site-header {
-  background: rgba(10, 14, 21, 0.72);
+  background: rgba(243, 234, 219, 0.72);
   border-bottom: 1px solid transparent;
 }
-.site-header.scrolled { border-bottom-color: var(--line); box-shadow: 0 8px 30px -16px rgba(0,0,0,0.8); }
-.brand-name { color: var(--head); }
+.site-header.scrolled { border-bottom-color: var(--line); box-shadow: 0 8px 30px -16px rgba(70,45,20,0.28); }
+/* Western wood-type logotype (the "mesquite" nod) */
+.brand-name { font-family: var(--font-western); font-weight: 400; letter-spacing: 0.01em; color: var(--head); }
 .brand-mark {
-  background: linear-gradient(135deg, var(--red), var(--red-dark));
-  color: #04121b;
+  background: linear-gradient(135deg, #C0813C, var(--red-dark));
+  color: #FCF8F1;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), var(--shadow-sm);
 }
 .nav a { color: var(--ink-soft); }
 .nav a:hover { color: var(--head); }
 
-/* buttons — dark ink on bright cyan for contrast */
-.btn-primary { background: var(--red); color: #04121b; box-shadow: 0 12px 28px -10px rgba(56,189,248,0.55); }
-.btn-primary:hover { background: var(--red-dark); color: #04121b; box-shadow: 0 18px 36px -12px rgba(14,165,233,0.6); }
+/* buttons — glossy bronze gel with cream label + specular top highlight */
+.btn-primary {
+  background-image: var(--gloss-top), linear-gradient(180deg, #C0813C, #86521F);
+  color: #FCF8F1;
+  border-color: rgba(120,74,34,0.55);
+  box-shadow: 0 12px 26px -10px rgba(120,70,25,0.55), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+.btn-primary:hover {
+  background-image: var(--gloss-top), linear-gradient(180deg, #B0703A, #6E4319);
+  color: #FCF8F1;
+  box-shadow: 0 18px 34px -12px rgba(120,70,25,0.6), inset 0 1px 0 rgba(255,255,255,0.45);
+}
 .btn-ghost { color: var(--head); border-color: var(--line-strong); }
-.btn-ghost:hover { border-color: var(--red); background: rgba(56,189,248,0.07); color: var(--head); }
+.btn-ghost:hover { border-color: var(--red); background: rgba(166,106,46,0.07); color: var(--head); }
 
-/* eyebrow / kicker / badges */
-.eyebrow { color: #bfe9ff; background: var(--red-tint); }
+/* eyebrow / kicker / badges — Western wood-type accents on bronze */
+.eyebrow {
+  font-family: var(--font-western); font-weight: 400;
+  text-transform: none; letter-spacing: 0.01em; font-size: 15px;
+  color: var(--red-dark); background: var(--red-tint);
+}
 .eyebrow .dot { background: var(--red); }
-.kicker { color: var(--red); }
-.badge { background: var(--red); color: #04121b; }
+.kicker { font-family: var(--font-western); text-transform: none; letter-spacing: 0.01em; color: var(--red-dark); }
+.badge { background: var(--red); color: #FCF8F1; }
 
 /* logo / trust bar */
 .logobar { background: var(--bg); border-color: var(--line); }
-.logobar-list li { color: var(--bone); opacity: 0.78; }
+.logobar-list li { color: var(--ink-soft); opacity: 0.9; }
 .trust-strip { border-top-color: var(--line); }
 .trust-strip strong { color: var(--head); }
 
@@ -972,6 +1007,7 @@ h1, h2, h3, h4 { color: var(--head); }
 .guarantee,
 .stat-box,
 .testimonial {
+  position: relative;
   background: var(--surface);
   border-color: var(--line);
 }
@@ -982,79 +1018,93 @@ h1, h2, h3, h4 { color: var(--head); }
 .vtestimonial:hover,
 .work-card:hover { box-shadow: var(--shadow-md); border-color: var(--line-strong); }
 
-/* icon chips + ticks */
-.card-icon { background: var(--blue-tint); color: var(--red); }
-.ticks li { color: var(--ink); }
-.ticks li::before { background: var(--red-tint); color: var(--red); }
+/* Y2K glossy-glass reflection — subtle top-left sheen on card surfaces.
+   z-index:-1 keeps it on the card background, beneath content, without
+   restyling children (so positioned badges/tags are untouched). */
+.card::after,
+.service-card::after,
+.price-card::after,
+.work-card::after,
+.guarantee::after {
+  content: ""; position: absolute; inset: 0; border-radius: inherit;
+  pointer-events: none; z-index: -1;
+  background: linear-gradient(155deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 28%);
+  mix-blend-mode: soft-light;
+}
 
-/* featured emphasis stays cyan */
+/* icon chips + ticks — burnished gold */
+.card-icon { background: var(--blue-tint); color: var(--red-dark); }
+.ticks li { color: var(--ink); }
+.ticks li::before { background: var(--red-tint); color: var(--red-dark); }
+
+/* featured emphasis — bronze */
 .service-card.featured { border: 1.5px solid var(--red); box-shadow: 0 0 0 1px var(--red-tint), var(--shadow-md); }
 .price-card.featured { border: 1.5px solid var(--red); box-shadow: 0 0 0 1px var(--red-tint), var(--shadow-md); }
 
 /* pricing numbers */
 .price span { color: var(--head); }
 .price small { color: var(--muted); }
-.price-card.featured .price span { color: var(--red); }
+.price-card.featured .price span { color: var(--red-dark); }
 .price-sub { color: var(--ink-soft); }
 
-/* review media (video-ready) */
-.vtestimonial-media { background: linear-gradient(135deg, rgba(56,189,248,0.18), rgba(125,211,252,0.05)); }
-.vtestimonial-play { background: rgba(8,12,18,0.55); color: var(--red); }
-.vtestimonial-soon { color: var(--bone); opacity: 0.8; }
+/* review media (video-ready) — iridescent tinted-glass panel */
+.vtestimonial-media { background: linear-gradient(135deg, rgba(199,154,76,0.22), rgba(226,142,168,0.10)); }
+.vtestimonial-play { background: rgba(42,29,18,0.55); color: #FCF8F1; }
+.vtestimonial-soon { color: var(--ink-soft); opacity: 0.9; }
 .vtestimonial-meta strong { color: var(--head); }
 .vtestimonial-meta span { color: var(--ink-soft); }
 
 /* guarantee block */
 .guarantee { border-color: var(--line-strong); box-shadow: var(--shadow-md); }
-.guarantee-icon { background: var(--red-tint); color: var(--red); }
+.guarantee-icon { background: var(--red-tint); color: var(--red-dark); }
 .guarantee strong { color: var(--head); }
 .guarantee p { color: var(--ink-soft); }
 
-/* teardown / quote panel — keep dark glass with cyan accents */
-.teardown { background: linear-gradient(160deg, #101824, #0a0f17); border: 1px solid var(--line); }
-.teardown .kicker { color: var(--red); }
-.teardown-copy p { color: rgba(232,238,246,0.82); }
+/* teardown / quote panel — smoked-char dark anchor with bronze/gold accents */
+.teardown { background: linear-gradient(160deg, #2A1D12, #180F08); border: 1px solid rgba(199,154,76,0.22); }
+.teardown .kicker { color: var(--blue); }
+.teardown-copy p { color: rgba(243,234,219,0.82); }
 .teardown-form input,
 .teardown-form select,
 .teardown-form textarea {
   width: 100%; padding: 15px 18px; font-size: 16px; font-family: var(--font-sans);
-  border-radius: 12px; border: 1.5px solid rgba(150,185,225,0.25);
-  background: rgba(150,185,225,0.06); color: var(--bone);
+  border-radius: 12px; border: 1.5px solid rgba(199,154,76,0.28);
+  background: rgba(243,234,219,0.06); color: var(--bone);
   transition: border-color .18s var(--ease), background .18s var(--ease);
 }
 .teardown-form textarea { min-height: 96px; resize: vertical; }
 .teardown-form select { appearance: none; -webkit-appearance: none; cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239DAEC1' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23C79A4C' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 16px center; padding-right: 42px; }
-.teardown-form input::placeholder, .teardown-form textarea::placeholder { color: rgba(232,238,246,0.5); }
+.teardown-form input::placeholder, .teardown-form textarea::placeholder { color: rgba(243,234,219,0.5); }
 .teardown-form input:focus,
 .teardown-form select:focus,
-.teardown-form textarea:focus { outline: none; border-color: var(--red); background: rgba(150,185,225,0.10); }
+.teardown-form textarea:focus { outline: none; border-color: var(--blue); background: rgba(243,234,219,0.10); }
 
 /* FAQ */
 .faq-list { border-top-color: var(--line); }
 .faq-list details { border-bottom-color: var(--line); }
 .faq-list summary { color: var(--head); }
-.faq-list summary::after { color: var(--red); }
+.faq-list summary::after { color: var(--red-dark); }
 .faq-list details p { color: var(--ink-soft); }
 
-/* footer accents */
-.footer-brand .brand-mark { background: linear-gradient(135deg, var(--red), var(--red-dark)); color: #04121b; }
-.footer-nav a:hover { color: var(--red); }
+/* footer accents (footer is a smoked-char band → bronze mark, gold hover) */
+.footer-brand .brand-mark { background: linear-gradient(135deg, #C0813C, var(--red-dark)); color: #FCF8F1; }
+.footer-nav a:hover { color: var(--blue); }
 
-/* lightbox — keep a light media frame (it previews live sites/photos) */
-.lightbox-ph { background: linear-gradient(135deg, #102433, #0a141d); color: var(--head); }
+/* lightbox — smoked-char media frame */
+.lightbox-ph { background: linear-gradient(135deg, #2A1D12, #180F08); color: var(--bone); }
 
-/* mobile nav + sticky CTA — dark glass */
+/* mobile nav + sticky CTA — warm bone glass */
 .nav-toggle span { background: var(--head); }
 .mobile-nav { border-top-color: var(--line); background: var(--bg); }
 .mobile-nav a { color: var(--head); border-bottom-color: var(--line); }
 @media (max-width: 820px) {
   .mobile-cta {
-    background: rgba(10,14,21,0.92);
+    background: rgba(243,234,219,0.92);
     border-top: 1px solid var(--line);
   }
-  .mobile-cta .btn { box-shadow: 0 10px 26px -8px rgba(56,189,248,0.6); }
+  .mobile-cta .btn { box-shadow: 0 10px 26px -8px rgba(120,70,25,0.5); }
 }
 
 /* real written-review cards (honest text quotes, not video placeholders) */
@@ -1072,13 +1122,16 @@ h1, h2, h3, h4 { color: var(--head); }
 .review cite span { display: block; color: var(--muted); font-weight: 400; font-size: 13px; margin-top: 3px; }
 @media (max-width: 820px) { .reviews { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; } }
 
-/* contact strip in final CTA */
-.contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 34px; margin: 26px 0 0; padding: 0; list-style: none; font-size: 16px; color: rgba(232,238,246,0.82); }
+/* contact strip in final CTA (smoked-char band → warm bone text, gold hover) */
+.contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 34px; margin: 26px 0 0; padding: 0; list-style: none; font-size: 16px; color: rgba(243,234,219,0.82); }
 .contact-row a { color: var(--bone); }
-.contact-row a:hover { color: var(--red); }
+.contact-row a:hover { color: var(--blue); }
 .social-links { display: inline-flex; gap: 16px; margin-top: 6px; }
-.social-links a { color: rgba(232,238,246,0.7); }
-.social-links a:hover { color: var(--red); }
+.social-links a { color: rgba(243,234,219,0.7); }
+.social-links a:hover { color: var(--blue); }
+/* dark-band accents: gold reads better than bronze on smoked char */
+.section-dark .kicker { color: var(--blue); }
+.booking-fallback a { color: var(--blue); }
 
 /* ============================================================
    ITERATION 2 — new conversion/SEO components (dark-native)
@@ -1090,12 +1143,12 @@ h1, h2, h3, h4 { color: var(--head); }
   .header-call {
     display: inline-grid; place-items: center;
     width: 42px; height: 42px; border-radius: 12px;
-    background: var(--red-tint); color: var(--red);
-    border: 1px solid rgba(56,189,248,0.30);
+    background: var(--red-tint); color: var(--red-dark);
+    border: 1px solid rgba(166,106,46,0.30);
     margin-left: auto; margin-right: 4px;
   }
   .header-call svg { width: 20px; height: 20px; }
-  .header-call:hover { background: rgba(56,189,248,0.20); }
+  .header-call:hover { background: rgba(166,106,46,0.20); }
 }
 
 /* --- rating / credibility header in Reviews --- */
@@ -1115,7 +1168,7 @@ h1, h2, h3, h4 { color: var(--head); }
 .options-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 .option-tag {
   display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
-  text-transform: uppercase; color: var(--red);
+  text-transform: uppercase; color: var(--red-dark);
   background: var(--red-tint); border-radius: 999px; padding: 4px 11px; margin-bottom: 14px;
 }
 .option-best { margin-top: 14px; font-size: 14px; color: var(--muted); }
@@ -1131,9 +1184,9 @@ h1, h2, h3, h4 { color: var(--head); }
   border-radius: 999px; padding: 9px 17px;
   transition: border-color .2s var(--ease), color .2s var(--ease), background .2s var(--ease);
 }
-.area-chip:hover { border-color: var(--red); color: var(--head); background: rgba(56,189,248,0.06); }
+.area-chip:hover { border-color: var(--red); color: var(--head); background: rgba(166,106,46,0.06); }
 .area-foot { margin: 28px 0 0; font-size: 16px; color: var(--ink-soft); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
-.area-foot a.area-call { color: var(--red); font-weight: 600; }
+.area-foot a.area-call { color: var(--red-dark); font-weight: 600; }
 .area-county { margin-top: 16px; font-size: 14px; color: var(--muted); }
 
 /* --- comparison table: dark overrides (component was light-on-#fff) --- */
@@ -1144,8 +1197,8 @@ h1, h2, h3, h4 { color: var(--head); }
 .compare-table thead th:first-child { background: transparent; }
 .compare-table tbody th { color: var(--ink-soft); }
 .compare-table td { color: var(--ink-soft); }
-.compare-table .col-me { background: rgba(56,189,248,0.10); color: var(--head); border-left-color: var(--red); border-right-color: var(--red); font-weight: 600; }
-.compare-table thead .col-me { background: var(--red); color: #04121b; border-top-color: var(--red); }
+.compare-table .col-me { background: rgba(166,106,46,0.10); color: var(--head); border-left-color: var(--red); border-right-color: var(--red); font-weight: 600; }
+.compare-table thead .col-me { background: var(--red); color: #FCF8F1; border-top-color: var(--red); }
 .compare-table tbody tr:last-child .col-me { border-bottom-color: var(--red); }
 .compare-x { color: var(--muted); }
 .compare-check { color: var(--red); font-weight: 700; }
@@ -1154,16 +1207,16 @@ h1, h2, h3, h4 { color: var(--head); }
 .promo {
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px 16px;
   max-width: 640px; margin: 0 auto 28px; padding: 16px 24px; text-align: center;
-  background: rgba(56,189,248,0.08); border: 1px solid rgba(56,189,248,0.30);
-  border-radius: 999px; color: var(--bone);
+  background: rgba(166,106,46,0.08); border: 1px solid rgba(166,106,46,0.30);
+  border-radius: 999px; color: var(--ink);
 }
 .promo-badge {
   font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-  color: #04121b; background: var(--red); border-radius: 999px; padding: 5px 12px;
+  color: #FCF8F1; background: var(--red); border-radius: 999px; padding: 5px 12px;
 }
 .promo strong { color: var(--head); }
 @media (max-width: 560px) { .promo { border-radius: var(--radius-lg); } }
 
-/* selection + focus visibility on dark */
-::selection { background: rgba(56,189,248,0.30); color: #fff; }
+/* selection + focus visibility */
+::selection { background: rgba(166,106,46,0.30); color: #241811; }
 :focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
