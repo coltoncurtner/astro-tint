@@ -1,5 +1,5 @@
 /* ============================================================
-   Colton Curtner — interactions
+   Astro Tint Solutions — interactions
    Vanilla JS, no dependencies.
    ============================================================ */
 (function () {
@@ -190,6 +190,62 @@
     window.addEventListener("scroll", refreshMcta, { passive: true });
     refreshMcta();
   }
+
+  /* ---- Tint-darkness simulator (VLT preview) ---- */
+  var sim = document.getElementById("simulator");
+  if (sim) {
+    var simStage = sim.querySelector(".sim-stage");
+    var simBtns = Array.prototype.slice.call(sim.querySelectorAll(".sim-btn"));
+    var simVlt = sim.querySelector("[data-sim-vlt]");
+    // darker tint (lower VLT) => more overlay opacity. Illustrative, not exact.
+    var vltToOpacity = function (vlt) { return Math.max(0, Math.min(0.85, (100 - vlt) / 100 * 0.82)); };
+    var setVlt = function (vlt) {
+      if (simStage) simStage.style.setProperty("--tint", String(vltToOpacity(vlt)));
+      if (simVlt) simVlt.textContent = vlt + "%";
+    };
+    simBtns.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        simBtns.forEach(function (b) { b.classList.remove("is-active"); b.setAttribute("aria-pressed", "false"); });
+        btn.classList.add("is-active");
+        btn.setAttribute("aria-pressed", "true");
+        setVlt(parseInt(btn.getAttribute("data-vlt"), 10) || 35);
+      });
+    });
+    var simActive = sim.querySelector(".sim-btn.is-active") || simBtns[0];
+    if (simActive) setVlt(parseInt(simActive.getAttribute("data-vlt"), 10) || 35);
+  }
+
+  /* ---- Before / after tint reveal slider ---- */
+  Array.prototype.slice.call(document.querySelectorAll(".ba-slider")).forEach(function (slider) {
+    var range = slider.querySelector(".ba-range");
+    var setPos = function (pct) {
+      pct = Math.max(0, Math.min(100, pct));
+      slider.style.setProperty("--pos", pct + "%");
+      if (range && Number(range.value) !== Math.round(pct)) range.value = String(Math.round(pct));
+    };
+    // keyboard accessibility via the (visually hidden) range input
+    if (range) {
+      range.style.pointerEvents = "none"; // let the slider own pointer drags
+      range.addEventListener("input", function () { setPos(Number(range.value)); });
+    }
+    // pointer drag anywhere on the image
+    var dragging = false;
+    var fromClientX = function (clientX) {
+      var rect = slider.getBoundingClientRect();
+      setPos(((clientX - rect.left) / rect.width) * 100);
+    };
+    slider.addEventListener("pointerdown", function (e) {
+      dragging = true;
+      try { slider.setPointerCapture(e.pointerId); } catch (err) { /* non-capturable pointer */ }
+      fromClientX(e.clientX);
+      if (range) range.focus({ preventScroll: true });
+    });
+    slider.addEventListener("pointermove", function (e) { if (dragging) fromClientX(e.clientX); });
+    var endDrag = function () { dragging = false; };
+    slider.addEventListener("pointerup", endDrag);
+    slider.addEventListener("pointercancel", endDrag);
+    setPos(range ? Number(range.value) : 50);
+  });
 
   /* ---- Current year in footer ---- */
   var yearEl = document.getElementById("year");
