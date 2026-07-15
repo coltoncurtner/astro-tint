@@ -18,7 +18,7 @@
   <meta name="description" content="Premium ceramic window tint, paint protection film & ceramic coatings for cars, homes & businesses across Chicago & all of Chicagoland. Heat, glare & UV blocking — lifetime warranty. Free quote." />
   <meta name="author" content="Astro Tint Solutions" />
   <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="theme-color" content="#F3EADB" />
+  <meta name="theme-color" content="#0E0F11" />
   <link rel="canonical" href="https://coltoncurtner.github.io/astro-tint/" />
 
   <!-- Open Graph / social share -->
@@ -36,12 +36,12 @@
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
 
-  <!-- Fonts — Sora (display) + Inter (body) -->
+  <!-- Fonts — Space Grotesk (display) + Space Mono (spec labels) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Rye&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/styles.css?v=6" />
 
   <!-- Preload the hero image for a fast LCP -->
   <link rel="preload" as="image" href="assets/hero.jpg" media="(min-width: 641px)" />
@@ -212,14 +212,86 @@
       </div>
     </section>
 
-    <!-- ===================== TRUSTED BY (real, photo-backed) ===================== -->
-    <section class="trusted reveal">
+    <!-- ===================== AUTHORIZED DEALER + WARRANTY BAND =====================
+         TODO (owner): confirm WHICH film brands Astro Tint is an authorized
+         dealer/installer for and drop only those in .dealer-brands (supply real
+         logos to replace the wordmarks). Confirm exact warranty wording/terms. -->
+    <section class="dealer-band reveal">
+      <div class="container dealer-inner">
+        <div class="dealer-brands-wrap">
+          <p class="dealer-label">Authorized dealer &amp; installer</p>
+          <ul class="dealer-brands">
+            <li>XPEL</li><li>LLumar</li><li>3M</li><li>SunTek</li><li>Ceramic&nbsp;Pro</li>
+          </ul>
+        </div>
+        <div class="warranty-seal reg-tick">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>
+            <strong>Lifetime Warranty</strong>
+            <span>Film &amp; workmanship</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== BEFORE / AFTER TINT SLIDER =====================
+         NOTE: both layers use the hero photo (the "before" layer is brightened
+         with a CSS filter to read as untinted glass) so the reveal aligns
+         perfectly. Swap in a REAL matched before/after pair (same shot, tint
+         off vs on) when available: set .ba-before src (and remove the filter). -->
+    <section class="section section-tint" id="compare-tint">
       <div class="container">
-        <p class="trusted-label">Recently trusted by Chicagoland drivers &amp; businesses</p>
-        <ul class="trusted-list">
-          <li>Planet Fitness</li><li>Raising Cane's</li><li>Boot Barn</li><li>Tesla</li><li>Mama Maria's</li>
-        </ul>
-        <p class="trusted-note">Storefronts, offices &amp; hundreds of vehicles across the Chicago metro &mdash; <a href="#work">see the work &rarr;</a></p>
+        <header class="section-head center reveal">
+          <p class="section-index">01 / See the difference</p>
+          <p class="kicker">Before &amp; after</p>
+          <h2>Drag to see the tint at work.</h2>
+          <p class="section-sub">Same glass, same light — one side untinted, one side with ceramic film. Grab the handle and slide.</p>
+        </header>
+        <div class="ba-slider reveal" style="--pos:50%">
+          <img class="ba-after" src="assets/hero.jpg" alt="Vehicle glass finished with ceramic window tint" loading="lazy" decoding="async" />
+          <img class="ba-before" src="assets/hero.jpg" alt="The same glass without tint — brighter, with more glare" loading="lazy" decoding="async" style="filter:brightness(1.55) contrast(.92) saturate(.72)" />
+          <span class="ba-label before">Untinted</span>
+          <span class="ba-label after">Ceramic tint</span>
+          <span class="ba-divider" aria-hidden="true"></span>
+          <input class="ba-range" type="range" min="0" max="100" value="50" aria-label="Reveal amount — untinted vs ceramic tint" />
+          <span class="ba-handle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7l-4 5 4 5M15 7l4 5-4 5"/></svg></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TINT-DARKNESS SIMULATOR =====================
+         Illustrative VLT preview — the overlay darkens the whole photo, not just
+         the glass. Swap assets/hero.jpg for a clean side-profile car shot for the
+         best effect. VLT→opacity mapping lives in js/main.js. -->
+    <section class="section" id="simulator">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-index">02 / Visualizer</p>
+          <p class="kicker">Tint darkness simulator</p>
+          <h2>Preview your shade before you book.</h2>
+          <p class="section-sub">Tap a VLT (visible light transmittance) to see how it reads — lower % is darker. We'll dial in the exact legal shade for your vehicle at drop-off.</p>
+        </header>
+        <div class="sim reveal">
+          <div class="sim-stage">
+            <img src="assets/hero.jpg" alt="Vehicle used to preview window tint darkness" loading="lazy" decoding="async" />
+            <div class="sim-overlay" aria-hidden="true"></div>
+            <p class="sim-readout">VLT <b data-sim-vlt>35%</b></p>
+          </div>
+          <div class="sim-controls" role="group" aria-label="Select tint darkness (VLT %)">
+            <button type="button" class="sim-btn" data-vlt="50" aria-pressed="false">50% · Light</button>
+            <button type="button" class="sim-btn is-active" data-vlt="35" aria-pressed="true">35% · Legal front</button>
+            <button type="button" class="sim-btn" data-vlt="20" aria-pressed="false">20% · Classic</button>
+            <button type="button" class="sim-btn" data-vlt="15" aria-pressed="false">15% · Dark</button>
+            <button type="button" class="sim-btn" data-vlt="5" aria-pressed="false">5% · Limo</button>
+          </div>
+          <div class="tint-scale-row" aria-hidden="true">
+            <span class="spec-label">Lighter</span>
+            <span class="tint-scale"></span>
+            <span class="spec-label">Darker</span>
+          </div>
+          <p class="sim-note">Illustrative only — real appearance varies by glass, film and light. Illinois limits front side windows to 35% VLT; ask us what's legal for your vehicle.</p>
+          <a class="btn btn-primary" href="#quote">Get a quote for this shade</a>
+        </div>
       </div>
     </section>
 
@@ -366,6 +438,35 @@
           <a class="btn btn-primary btn-sm" href="#quote">Check my area</a>
           <a class="area-call" href="tel:+16303620909">or call (630) 362-0909</a>
         </div>
+      </div>
+    </section>
+
+    <!-- ===================== ILLINOIS TINT LAW =====================
+         Reference values per IL law (front side windows 35% VLT; SUV/van rear
+         may be any darkness; windshield top 6 in. only). Labeled "for reference"
+         — law can change; owner/installer confirms the current legal shade. -->
+    <section class="section" id="tint-law">
+      <div class="container">
+        <header class="section-head center reveal">
+          <p class="kicker">Illinois tint law</p>
+          <h2>Know your legal limits.</h2>
+          <p class="section-sub">Illinois sets how dark each window can go, measured in VLT (visible light transmittance). We install to spec so you stay legal — here's the quick reference.</p>
+        </header>
+        <div class="lawtable-wrap reveal reg-tick">
+          <table class="lawtable">
+            <caption>IL passenger-vehicle VLT limits · for reference</caption>
+            <thead>
+              <tr><th scope="col">Window</th><th scope="col">Sedan</th><th scope="col">SUV / Van</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Windshield</th><td>Top 6 in.</td><td>Top 6 in.</td></tr>
+              <tr><th scope="row">Front side</th><td>35%+</td><td>35%+</td></tr>
+              <tr><th scope="row">Back side</th><td>35%+</td><td>Any</td></tr>
+              <tr><th scope="row">Rear window</th><td>35%+</td><td>Any</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="law-note reveal">Reference only — Illinois law can change and medical exemptions may apply. We'll confirm the current legal shade for your exact vehicle at your appointment.</p>
       </div>
     </section>
 
@@ -627,6 +728,6 @@
   </footer>
 
   <div class="mobile-cta" id="mobileCta"><a class="btn btn-primary" href="#quote">Get my free quote</a></div>
-  <script src="js/main.js?v=2" defer></script>
+  <script src="js/main.js?v=3" defer></script>
 </body>
 </html>

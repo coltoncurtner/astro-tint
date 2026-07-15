@@ -16,52 +16,48 @@
      Swap every value to the client's brand. Keep --ink/--muted/--white.
      These are NEUTRAL defaults — never ship them as-is.
      ============================================================ */
-  /* ASTRO TINT — "Smoked Chrome / Liquid Mesquite" upscale Y2K desert-luxe theme.
-     Warm LIGHT "desert bone" base with smoked-mesquite char anchors + bronze/gold
-     accents. Historical names kept so the universal components keep working; ROLES
-     are re-pointed. A WARM-LUXE ADAPTATION LAYER at the very bottom of this file
-     re-points surfaces/text and adds the Y2K gloss (chrome logotype, gel buttons,
-     iridescent tinted-glass sheens). */
-  --navy:        #2A1D12;   /* smoked-mesquite char: dark bands, footer, quote panel, avatar */
-  --navy-deep:   #1A110A;   /* deepest charred espresso: footer / deepest dark bands */
-  --red:         #A66A2E;   /* ACCENT — bronze (CTA bg, highlights) */
-  --red-dark:    #86521F;   /* accent hover + small accent text (AA on bone) */
-  --red-tint:    rgba(166, 106, 46, 0.12);  /* translucent bronze: eyebrow/badge/tick bg */
-  --blue:        #C79A4C;   /* secondary — burnished gold (icon glyphs) */
-  --blue-tint:   rgba(199, 154, 76, 0.16);  /* gold icon-chip background */
-  --bone:        #F3EADB;   /* LIGHT text used on the dark char bands (do NOT darken) */
-  --bone-2:      #E9DCC7;   /* tinted (warm sand) section background */
-  --ink:         #3E3123;   /* primary body text (warm espresso) */
-  --ink-soft:    #6E5B46;   /* secondary text */
-  --muted:       #9C8A70;   /* faint text */
+  /* ASTRO TINT — "Blacked-Out" sharp premium theme.
+     Near-black glass base, off-white text, ONE disciplined cool steel-blue accent.
+     Sharp modern sans (Space Grotesk) + monospace spec labels (Space Mono).
+     Historical token names are kept as ROLES so the universal components keep
+     working; a SHARP DARK ADAPTATION LAYER at the very bottom of this file
+     re-points surfaces/text, strips the soft/bubbly gloss, and adds the
+     tint-scale + spec-sheet brand system and the new industry sections. */
+  --navy:        #131519;   /* dark band / anchor surface (was a dark ink; now a surface) */
+  --navy-deep:   #08090B;   /* deepest band: footer / dark CTA bands */
+  --red:         #4E8FD6;   /* ACCENT — steel blue (CTA bg, highlights, ticks) */
+  --red-dark:    #6EA6E6;   /* accent hover / lighter accent text on dark (AA) */
+  --red-tint:    rgba(78, 143, 214, 0.14);   /* translucent accent: eyebrow/badge/tick bg */
+  --blue:        #9BB2C9;   /* secondary — silvered steel (icon glyphs) */
+  --blue-tint:   rgba(155, 178, 201, 0.14);  /* steel icon-chip background */
+  --bone:        #E4E7EC;   /* LIGHT text used on the dark bands */
+  --bone-2:      #1B1E23;   /* tinted (slightly raised) section background */
+  --ink:         #C7CCD4;   /* primary body text (off-white) */
+  --ink-soft:    #8A909B;   /* secondary text */
+  --muted:       #5E646E;   /* faint text */
   --white:       #FFFFFF;
-  --line:        rgba(90, 60, 28, 0.14);
-  --line-strong: rgba(90, 60, 28, 0.28);
+  --line:        rgba(255, 255, 255, 0.10);
+  --line-strong: rgba(255, 255, 255, 0.20);
 
-  /* Light desert-bone base */
-  --bg:          #F3EADB;   /* page background (warm desert bone) */
-  --surface:     #FCF8F1;   /* card / warm-white glass surface */
-  --surface-2:   #F4EBDC;   /* elevated / hover surface */
-  --head:        #241811;   /* headings + strong text (near-char) */
-  --accent-glow: rgba(166, 106, 46, 0.18);
+  /* Blacked-out base */
+  --bg:          #0E0F11;   /* page background (near-black, faintly cool) */
+  --surface:     #16181C;   /* card surface */
+  --surface-2:   #1B1E23;   /* elevated / hover surface */
+  --head:        #F6F8FA;   /* headings + strong text (near-white) */
+  --accent-glow: rgba(78, 143, 214, 0.20);
 
-  /* Y2K gloss — chrome logotype, iridescent tinted glass, gel-button highlight */
-  --chrome-bronze: linear-gradient(180deg, #F0DBB4 0%, #B07C3E 30%, #7A4E22 52%, #C89A5A 74%, #F0DBB4 100%);
-  --iridescent:    linear-gradient(115deg, rgba(255,214,153,0.35), rgba(226,142,168,0.30), rgba(150,196,214,0.30), rgba(198,160,220,0.32));
-  --gloss-top:     linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0) 55%);
-
-  /* Type — luxe high-contrast serif display + Western wood-type accent + Inter body. */
-  --font-display: "Fraunces", Georgia, "Times New Roman", serif;
-  --font-western: "Rye", "Fraunces", Georgia, serif;
+  /* Type — sharp geometric grotesk display + mono spec labels + Inter body. */
+  --font-display: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono:    "Space Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
   --font-sans:    "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  /* Layout */
+  /* Layout — sharp: small radii, tight crisp shadows */
   --container: 1140px;
-  --radius:    14px;
-  --radius-lg: 22px;
-  --shadow-sm: 0 2px 10px rgba(70, 45, 20, 0.10);
-  --shadow-md: 0 22px 48px -22px rgba(70, 45, 20, 0.24);
-  --shadow-lg: 0 44px 90px -30px rgba(70, 45, 20, 0.30);
+  --radius:    3px;
+  --radius-lg: 4px;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.45);
+  --shadow-md: 0 8px 24px -14px rgba(0, 0, 0, 0.7);
+  --shadow-lg: 0 20px 50px -24px rgba(0, 0, 0, 0.8);
   --ease:      cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -265,8 +261,8 @@ p { margin: 0 0 1rem; }
   object-position: center 52%;
   background: var(--surface-2);
 }
-/* Y2K iridescent tinted-glass sheen + warm scrim (also harmonizes the photo's
-   cool cast toward the desert-luxe palette) */
+/* Legacy hero-photo sheen — DISABLED by the sharp dark layer (.hero-photo::after
+   { display:none }); kept only so the base component file stays intact. */
 .hero-photo::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background:
@@ -921,84 +917,104 @@ p { margin: 0 0 1rem; }
 }
 
 /* ============================================================
-   ASTRO TINT — WARM-LUXE ADAPTATION LAYER  ("Smoked Chrome / Liquid Mesquite")
-   The starter components were authored light-on-bone; this block (loaded last,
-   so it wins by source order) re-points surfaces/text for the warm LIGHT
-   "desert bone" theme and layers on the Balanced Y2K gloss: chrome logotype,
-   glossy gel buttons, iridescent tinted-glass sheens, gold metallic hairlines.
-   A few smoked-char bands (footer, dark CTA bands, quote panel) stay dark as
-   dramatic contrast anchors, recolored bronze/gold. Structure is untouched.
+   ASTRO TINT — SHARP DARK ADAPTATION LAYER  ("Blacked-Out")
+   Loaded last (wins by source order). Re-points the light-on-bone starter
+   components to the near-black glass theme, STRIPS the soft/bubbly gloss
+   (chrome text, iridescent sheens, gel buttons, big floaty shadows, pills,
+   bouncy hovers, backdrop blur), and adds the tint-scale + spec-sheet brand
+   system plus the new industry sections (dealer band, before/after slider,
+   tint simulator, IL tint-law panel). Structure is untouched.
    ============================================================ */
 
 /* page + global text */
 body { background: var(--bg); color: var(--ink); }
-h1, h2, h3, h4 { color: var(--head); }
-.accent { color: var(--red-dark); }
-.section-tint { background: var(--bone-2); }
+h1, h2, h3, h4 { color: var(--head); font-weight: 600; letter-spacing: -0.02em; }
+.accent { color: var(--red); }
+/* sharp section separation via hairline rules, not soft color blocks */
+.section-tint { background: var(--bone-2); border-block: 1px solid var(--line); }
 
-/* Y2K liquid-chrome on the large hero phrase (reads best at display size) */
+/* kill the Y2K chrome headline — solid steel-blue accent word */
 .hero h1 .accent {
-  background: var(--chrome-bronze);
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent; color: transparent;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.35);
+  background: none; -webkit-text-fill-color: currentColor;
+  color: var(--red); text-shadow: none;
 }
 
-/* faint warm glow behind hero */
+/* very faint cool glow behind hero */
 .hero::before {
-  background:
-    radial-gradient(58% 70% at 82% -5%, rgba(199,154,76,0.28), transparent 60%),
-    radial-gradient(48% 60% at -5% 105%, rgba(166,106,46,0.14), transparent 55%);
+  background: radial-gradient(55% 65% at 85% -5%, rgba(78,143,214,0.10), transparent 62%);
 }
+/* remove iridescent tinted-glass sheen on the hero photo */
+.hero-photo::after { display: none; }
+.hero-photo { border-radius: 4px; border: 1px solid var(--line-strong); box-shadow: var(--shadow-lg); }
+.hero-photo-tag {
+  border-radius: 2px; background: rgba(0,0,0,0.6);
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+  border: 1px solid var(--line); color: var(--head);
+  font-family: var(--font-mono); font-size: 11px; font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.08em;
+}
+.hero-photo-tag .dot { background: var(--red); border-radius: 0; }
 
-/* header — warm bone glass */
+/* header — smoked glass, NO blur, crisp hairline */
 .site-header {
-  background: rgba(243, 234, 219, 0.72);
-  border-bottom: 1px solid transparent;
+  background: rgba(14, 15, 17, 0.88);
+  backdrop-filter: none; -webkit-backdrop-filter: none;
+  border-bottom: 1px solid var(--line);
 }
-.site-header.scrolled { border-bottom-color: var(--line); box-shadow: 0 8px 30px -16px rgba(70,45,20,0.28); }
-/* Western wood-type logotype (the "mesquite" nod) */
-.brand-name { font-family: var(--font-western); font-weight: 400; letter-spacing: 0.01em; color: var(--head); }
+.site-header.scrolled { border-bottom-color: var(--line-strong); box-shadow: 0 1px 0 rgba(0,0,0,0.6); }
+/* sharp square brand mark + clean sans wordmark (no more Western wood-type) */
+.brand-name { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; color: var(--head); }
 .brand-mark {
-  background: linear-gradient(135deg, #C0813C, var(--red-dark));
-  color: #FCF8F1;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), var(--shadow-sm);
+  background: var(--red); color: #0E0F11;
+  border-radius: 2px; box-shadow: none;
+  font-family: var(--font-display); font-weight: 700;
 }
 .nav a { color: var(--ink-soft); }
 .nav a:hover { color: var(--head); }
 
-/* buttons — glossy bronze gel with cream label + specular top highlight */
+/* buttons — sharp, flat, solid; ghost = hairline. No pill, no gloss, no lift. */
+.btn { border-radius: 3px; }
+.btn:active { transform: none; }
 .btn-primary {
-  background-image: var(--gloss-top), linear-gradient(180deg, #C0813C, #86521F);
-  color: #FCF8F1;
-  border-color: rgba(120,74,34,0.55);
-  box-shadow: 0 12px 26px -10px rgba(120,70,25,0.55), inset 0 1px 0 rgba(255,255,255,0.4);
+  background: var(--red); background-image: none; color: #08111C;
+  border-color: var(--red); box-shadow: none;
 }
-.btn-primary:hover {
-  background-image: var(--gloss-top), linear-gradient(180deg, #B0703A, #6E4319);
-  color: #FCF8F1;
-  box-shadow: 0 18px 34px -12px rgba(120,70,25,0.6), inset 0 1px 0 rgba(255,255,255,0.45);
-}
-.btn-ghost { color: var(--head); border-color: var(--line-strong); }
-.btn-ghost:hover { border-color: var(--red); background: rgba(166,106,46,0.07); color: var(--head); }
+.btn-primary:hover { background: var(--red-dark); color: #08111C; transform: none; box-shadow: none; }
+.btn-ghost { color: var(--head); border-color: var(--line-strong); background: transparent; }
+.btn-ghost:hover { border-color: var(--red); background: rgba(78,143,214,0.08); color: var(--head); transform: none; }
 
-/* eyebrow / kicker / badges — Western wood-type accents on bronze */
+/* eyebrow / kicker / badges — MONOSPACE spec-sheet labels (the brand tell) */
 .eyebrow {
-  font-family: var(--font-western); font-weight: 400;
-  text-transform: none; letter-spacing: 0.01em; font-size: 15px;
+  font-family: var(--font-mono); font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.14em; font-size: 12px;
   color: var(--red-dark); background: var(--red-tint);
+  border: 1px solid rgba(78,143,214,0.25); border-radius: 2px;
 }
-.eyebrow .dot { background: var(--red); }
-.kicker { font-family: var(--font-western); text-transform: none; letter-spacing: 0.01em; color: var(--red-dark); }
-.badge { background: var(--red); color: #FCF8F1; }
+.eyebrow .dot { background: var(--red); border-radius: 0; width: 6px; height: 6px; }
+.kicker {
+  font-family: var(--font-mono); font-weight: 400;
+  text-transform: uppercase; letter-spacing: 0.14em; font-size: 12.5px;
+  color: var(--red-dark);
+  display: inline-flex; align-items: center; gap: 9px;
+}
+/* leading registration tick — reads like a spec sheet */
+.kicker::before { content: ""; width: 16px; height: 1px; background: var(--red); flex: none; }
+.section-head.center .kicker { justify-content: center; }
+.badge {
+  background: var(--red); color: #0E0F11; border-radius: 2px;
+  font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; font-size: 11px;
+}
 
 /* logo / trust bar */
 .logobar { background: var(--bg); border-color: var(--line); }
-.logobar-list li { color: var(--ink-soft); opacity: 0.9; }
+.logobar-list li { color: var(--ink-soft); font-family: var(--font-display); opacity: 0.9; }
 .trust-strip { border-top-color: var(--line); }
 .trust-strip strong { color: var(--head); }
+.trusted-list li { color: var(--head); font-family: var(--font-display); }
+.trusted-list li:not(:last-child)::after { color: var(--red); }
+.trusted-note a { color: var(--red-dark); }
 
-/* glass surfaces (cards, services, pricing, reviews, showcase, guarantee, stats) */
+/* flat dark surfaces — hairline border, NO gloss, NO shadow, NO lift */
 .card,
 .service-card,
 .price-card,
@@ -1006,132 +1022,140 @@ h1, h2, h3, h4 { color: var(--head); }
 .work-card,
 .guarantee,
 .stat-box,
-.testimonial {
+.testimonial,
+.review,
+.booking-embed {
   position: relative;
   background: var(--surface);
   border-color: var(--line);
+  box-shadow: none;
 }
-.card { box-shadow: var(--shadow-sm); }
 .card:hover,
 .service-card:hover,
 .price-card:hover,
 .vtestimonial:hover,
-.work-card:hover { box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.review:hover,
+.work-card:hover { box-shadow: none; border-color: var(--red); transform: none; }
+.price-card.featured, .price-card.featured:hover { transform: none; }
 
-/* Y2K glossy-glass reflection — subtle top-left sheen on card surfaces.
-   z-index:-1 keeps it on the card background, beneath content, without
-   restyling children (so positioned badges/tags are untouched). */
-.card::after,
-.service-card::after,
-.price-card::after,
-.work-card::after,
-.guarantee::after {
-  content: ""; position: absolute; inset: 0; border-radius: inherit;
-  pointer-events: none; z-index: -1;
-  background: linear-gradient(155deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 28%);
-  mix-blend-mode: soft-light;
-}
-
-/* icon chips + ticks — burnished gold */
-.card-icon { background: var(--blue-tint); color: var(--red-dark); }
+/* icon chips + ticks — steel accent, squared */
+.card-icon { background: var(--red-tint); color: var(--red); border-radius: 3px; }
 .ticks li { color: var(--ink); }
-.ticks li::before { background: var(--red-tint); color: var(--red-dark); }
+.ticks li::before { background: var(--red-tint); color: var(--red); border-radius: 2px; }
 
-/* featured emphasis — bronze */
-.service-card.featured { border: 1.5px solid var(--red); box-shadow: 0 0 0 1px var(--red-tint), var(--shadow-md); }
-.price-card.featured { border: 1.5px solid var(--red); box-shadow: 0 0 0 1px var(--red-tint), var(--shadow-md); }
+/* featured emphasis — accent hairline frame, no glow */
+.service-card.featured { border: 1px solid var(--red); box-shadow: none; }
+.price-card.featured { border: 1px solid var(--red); box-shadow: none; }
+
+/* stats + testimonial text on dark */
+.stat-box { background: var(--surface); border: 1px solid var(--line); }
+.stat-num { color: var(--head); font-family: var(--font-display); }
+.stat-box:nth-child(2) .stat-num { color: var(--red); }
+.testimonial { border-left: 3px solid var(--red); }
+.testimonial blockquote { color: var(--head); font-family: var(--font-display); font-weight: 500; }
+.t-avatar { background: var(--red); color: #0E0F11; }
 
 /* pricing numbers */
 .price span { color: var(--head); }
 .price small { color: var(--muted); }
-.price-card.featured .price span { color: var(--red-dark); }
+.price-card.featured .price span { color: var(--red); }
 .price-sub { color: var(--ink-soft); }
 
-/* review media (video-ready) — iridescent tinted-glass panel */
-.vtestimonial-media { background: linear-gradient(135deg, rgba(199,154,76,0.22), rgba(226,142,168,0.10)); }
-.vtestimonial-play { background: rgba(42,29,18,0.55); color: #FCF8F1; }
+/* review media (video-ready) — flat steel panel */
+.vtestimonial-media { background: linear-gradient(135deg, rgba(78,143,214,0.14), rgba(155,178,201,0.06)); }
+.vtestimonial-play { background: rgba(0,0,0,0.55); color: var(--head); }
 .vtestimonial-soon { color: var(--ink-soft); opacity: 0.9; }
 .vtestimonial-meta strong { color: var(--head); }
 .vtestimonial-meta span { color: var(--ink-soft); }
 
 /* guarantee block */
-.guarantee { border-color: var(--line-strong); box-shadow: var(--shadow-md); }
-.guarantee-icon { background: var(--red-tint); color: var(--red-dark); }
+.guarantee { border: 1px solid var(--line-strong); border-left: 3px solid var(--red); box-shadow: none; border-radius: 4px; }
+.guarantee-icon { background: var(--red-tint); color: var(--red); border-radius: 3px; }
 .guarantee strong { color: var(--head); }
 .guarantee p { color: var(--ink-soft); }
 
-/* teardown / quote panel — smoked-char dark anchor with bronze/gold accents */
-.teardown { background: linear-gradient(160deg, #2A1D12, #180F08); border: 1px solid rgba(199,154,76,0.22); }
-.teardown .kicker { color: var(--blue); }
-.teardown-copy p { color: rgba(243,234,219,0.82); }
+/* teardown / quote panel — darkest anchor, crisp hairline */
+.teardown { background: var(--navy); border: 1px solid var(--line); box-shadow: none; }
+.teardown .kicker { color: var(--red-dark); }
+.teardown-copy p { color: rgba(228,231,236,0.82); }
 .teardown-form input,
 .teardown-form select,
 .teardown-form textarea {
-  width: 100%; padding: 15px 18px; font-size: 16px; font-family: var(--font-sans);
-  border-radius: 12px; border: 1.5px solid rgba(199,154,76,0.28);
-  background: rgba(243,234,219,0.06); color: var(--bone);
+  width: 100%; padding: 14px 16px; font-size: 16px; font-family: var(--font-sans);
+  border-radius: 3px; border: 1px solid var(--line-strong);
+  background: rgba(255,255,255,0.04); color: var(--bone);
   transition: border-color .18s var(--ease), background .18s var(--ease);
 }
 .teardown-form textarea { min-height: 96px; resize: vertical; }
 .teardown-form select { appearance: none; -webkit-appearance: none; cursor: pointer;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23C79A4C' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%239BB2C9' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
   background-repeat: no-repeat; background-position: right 16px center; padding-right: 42px; }
-.teardown-form input::placeholder, .teardown-form textarea::placeholder { color: rgba(243,234,219,0.5); }
+.teardown-form input::placeholder, .teardown-form textarea::placeholder { color: rgba(228,231,236,0.45); }
 .teardown-form input:focus,
 .teardown-form select:focus,
-.teardown-form textarea:focus { outline: none; border-color: var(--blue); background: rgba(243,234,219,0.10); }
+.teardown-form textarea:focus { outline: none; border-color: var(--red); background: rgba(255,255,255,0.07); }
 
 /* FAQ */
 .faq-list { border-top-color: var(--line); }
 .faq-list details { border-bottom-color: var(--line); }
-.faq-list summary { color: var(--head); }
-.faq-list summary::after { color: var(--red-dark); }
+.faq-list summary { color: var(--head); font-family: var(--font-display); }
+.faq-list summary::after { color: var(--red); }
 .faq-list details p { color: var(--ink-soft); }
 
-/* footer accents (footer is a smoked-char band → bronze mark, gold hover) */
-.footer-brand .brand-mark { background: linear-gradient(135deg, #C0813C, var(--red-dark)); color: #FCF8F1; }
-.footer-nav a:hover { color: var(--blue); }
+/* footer accents */
+.footer-brand .brand-mark { background: var(--red); color: #0E0F11; }
+.footer-nav a:hover { color: var(--red-dark); }
+.booking-placeholder { border-color: var(--line-strong); }
 
-/* lightbox — smoked-char media frame */
-.lightbox-ph { background: linear-gradient(135deg, #2A1D12, #180F08); color: var(--bone); }
+/* lightbox — dark panel + squared controls */
+.lightbox-backdrop { background: rgba(0,0,0,0.82); }
+.lightbox-panel { background: var(--surface); border: 1px solid var(--line-strong); border-radius: 4px; box-shadow: var(--shadow-lg); }
+.lightbox-close { background: rgba(0,0,0,0.5); color: var(--head); border: 1px solid var(--line); border-radius: 2px; }
+.lightbox-close:hover { background: rgba(0,0,0,0.72); }
+.lightbox-body { background: var(--bg); }
+.lightbox-caption { border-top-color: var(--line); }
+.lightbox-caption strong { color: var(--head); }
+.lightbox-nav { background: rgba(0,0,0,0.5); color: var(--head); border: 1px solid var(--line); border-radius: 2px; }
+.lightbox-nav:hover { background: rgba(0,0,0,0.72); }
+.lightbox-ph { background: var(--navy); color: var(--bone); }
 
-/* mobile nav + sticky CTA — warm bone glass */
+/* mobile nav + sticky CTA — NO blur */
 .nav-toggle span { background: var(--head); }
 .mobile-nav { border-top-color: var(--line); background: var(--bg); }
 .mobile-nav a { color: var(--head); border-bottom-color: var(--line); }
 @media (max-width: 820px) {
   .mobile-cta {
-    background: rgba(243,234,219,0.92);
+    background: rgba(14,15,17,0.94);
+    backdrop-filter: none; -webkit-backdrop-filter: none;
     border-top: 1px solid var(--line);
   }
-  .mobile-cta .btn { box-shadow: 0 10px 26px -8px rgba(120,70,25,0.5); }
+  .mobile-cta .btn { box-shadow: none; }
 }
 
 /* real written-review cards (honest text quotes, not video placeholders) */
 .reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; list-style: none; margin: 0; padding: 0; }
 .review {
   background: var(--surface); border: 1px solid var(--line);
-  border-radius: var(--radius); padding: 30px 28px; box-shadow: var(--shadow-sm);
+  border-radius: var(--radius); padding: 30px 28px; box-shadow: none;
   display: flex; flex-direction: column;
-  transition: transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
+  transition: border-color .2s var(--ease);
 }
-.review:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--line-strong); }
+.review:hover { transform: none; box-shadow: none; border-color: var(--red); }
 .review-stars { color: var(--red); letter-spacing: 3px; font-size: 15px; margin-bottom: 14px; }
 .review p { color: var(--ink); font-size: 17px; line-height: 1.55; margin: 0 0 20px; }
 .review cite { margin-top: auto; color: var(--head); font-weight: 600; font-style: normal; font-size: 15px; }
 .review cite span { display: block; color: var(--muted); font-weight: 400; font-size: 13px; margin-top: 3px; }
 @media (max-width: 820px) { .reviews { grid-template-columns: 1fr; max-width: 460px; margin-inline: auto; } }
 
-/* contact strip in final CTA (smoked-char band → warm bone text, gold hover) */
-.contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 34px; margin: 26px 0 0; padding: 0; list-style: none; font-size: 16px; color: rgba(243,234,219,0.82); }
+/* contact strip in final CTA (dark band → light text, steel hover) */
+.contact-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 34px; margin: 26px 0 0; padding: 0; list-style: none; font-size: 16px; color: rgba(228,231,236,0.82); }
 .contact-row a { color: var(--bone); }
-.contact-row a:hover { color: var(--blue); }
+.contact-row a:hover { color: var(--red-dark); }
 .social-links { display: inline-flex; gap: 16px; margin-top: 6px; }
-.social-links a { color: rgba(243,234,219,0.7); }
-.social-links a:hover { color: var(--blue); }
-/* dark-band accents: gold reads better than bronze on smoked char */
-.section-dark .kicker { color: var(--blue); }
-.booking-fallback a { color: var(--blue); }
+.social-links a { color: rgba(228,231,236,0.7); }
+.social-links a:hover { color: var(--red-dark); }
+.section-dark .kicker { color: var(--red-dark); }
+.booking-fallback a { color: var(--red-dark); }
 
 /* ============================================================
    ITERATION 2 — new conversion/SEO components (dark-native)
@@ -1142,13 +1166,13 @@ h1, h2, h3, h4 { color: var(--head); }
 @media (max-width: 820px) {
   .header-call {
     display: inline-grid; place-items: center;
-    width: 42px; height: 42px; border-radius: 12px;
-    background: var(--red-tint); color: var(--red-dark);
-    border: 1px solid rgba(166,106,46,0.30);
+    width: 42px; height: 42px; border-radius: 3px;
+    background: var(--red-tint); color: var(--red);
+    border: 1px solid rgba(78,143,214,0.30);
     margin-left: auto; margin-right: 4px;
   }
   .header-call svg { width: 20px; height: 20px; }
-  .header-call:hover { background: rgba(166,106,46,0.20); }
+  .header-call:hover { background: rgba(78,143,214,0.20); }
 }
 
 /* --- rating / credibility header in Reviews --- */
@@ -1156,7 +1180,7 @@ h1, h2, h3, h4 { color: var(--head); }
   display: flex; flex-direction: column; align-items: center; gap: 6px;
   margin: 0 auto 40px; padding: 22px 30px; max-width: 560px;
   background: var(--surface); border: 1px solid var(--line);
-  border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); text-align: center;
+  border-radius: 4px; box-shadow: none; text-align: center;
 }
 .review-rating-top { display: inline-flex; align-items: baseline; gap: 12px; }
 .review-rating-num { font-family: var(--font-display); font-weight: 700; font-size: 44px; color: var(--head); line-height: 1; }
@@ -1167,56 +1191,202 @@ h1, h2, h3, h4 { color: var(--head); }
 /* --- tint & film options grid (4 buyer-guide cards) --- */
 .options-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 .option-tag {
-  display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.04em;
-  text-transform: uppercase; color: var(--red-dark);
-  background: var(--red-tint); border-radius: 999px; padding: 4px 11px; margin-bottom: 14px;
+  display: inline-block; font-family: var(--font-mono); font-size: 11px; font-weight: 400;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--red-dark);
+  background: var(--red-tint); border: 1px solid rgba(78,143,214,0.25);
+  border-radius: 2px; padding: 4px 10px; margin-bottom: 14px;
 }
 .option-best { margin-top: 14px; font-size: 14px; color: var(--muted); }
 .option-best strong { color: var(--ink-soft); font-weight: 600; }
 @media (max-width: 980px) { .options-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 560px) { .options-grid { grid-template-columns: 1fr; } }
 
-/* --- service area --- */
+/* --- service area — squared chips --- */
 .area-grid { display: flex; flex-wrap: wrap; gap: 11px; margin: 0; padding: 0; list-style: none; }
 .area-chip {
   font-size: 15px; color: var(--ink);
   background: var(--surface); border: 1px solid var(--line);
-  border-radius: 999px; padding: 9px 17px;
+  border-radius: 3px; padding: 9px 17px;
   transition: border-color .2s var(--ease), color .2s var(--ease), background .2s var(--ease);
 }
-.area-chip:hover { border-color: var(--red); color: var(--head); background: rgba(166,106,46,0.06); }
+.area-chip:hover { border-color: var(--red); color: var(--head); background: rgba(78,143,214,0.06); }
 .area-foot { margin: 28px 0 0; font-size: 16px; color: var(--ink-soft); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
 .area-foot a.area-call { color: var(--red-dark); font-weight: 600; }
 .area-county { margin-top: 16px; font-size: 14px; color: var(--muted); }
 
-/* --- comparison table: dark overrides (component was light-on-#fff) --- */
-.compare-wrap { border-color: var(--line); box-shadow: var(--shadow-md); }
+/* --- work filters — squared --- */
+.work-filter { border-radius: 3px; background: var(--surface); border-color: var(--line); color: var(--ink-soft); }
+.work-filter:hover { color: var(--head); border-color: var(--line-strong); }
+.work-filter.is-active { color: #0E0F11; background: var(--red); border-color: var(--red); }
+
+/* --- comparison table: dark overrides --- */
+.compare-wrap { border-color: var(--line); box-shadow: none; border-radius: 4px; }
 .compare-table { background: var(--surface); }
 .compare-table th, .compare-table td { border-bottom-color: var(--line); }
-.compare-table thead th { color: var(--head); background: var(--bone-2); }
+.compare-table thead th { color: var(--head); background: var(--bone-2); font-family: var(--font-display); }
 .compare-table thead th:first-child { background: transparent; }
 .compare-table tbody th { color: var(--ink-soft); }
 .compare-table td { color: var(--ink-soft); }
-.compare-table .col-me { background: rgba(166,106,46,0.10); color: var(--head); border-left-color: var(--red); border-right-color: var(--red); font-weight: 600; }
-.compare-table thead .col-me { background: var(--red); color: #FCF8F1; border-top-color: var(--red); }
+.compare-table .col-me { background: rgba(78,143,214,0.12); color: var(--head); border-left-color: var(--red); border-right-color: var(--red); font-weight: 600; }
+.compare-table thead .col-me { background: var(--red); color: #0E0F11; border-top-color: var(--red); border-radius: 0; }
 .compare-table tbody tr:last-child .col-me { border-bottom-color: var(--red); }
 .compare-x { color: var(--muted); }
 .compare-check { color: var(--red); font-weight: 700; }
 
-/* --- promo callout (offer TBC with Seb) --- */
+/* --- promo callout (offer TBC with Seb) — squared --- */
 .promo {
   display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px 16px;
   max-width: 640px; margin: 0 auto 28px; padding: 16px 24px; text-align: center;
-  background: rgba(166,106,46,0.08); border: 1px solid rgba(166,106,46,0.30);
-  border-radius: 999px; color: var(--ink);
+  background: rgba(78,143,214,0.08); border: 1px solid rgba(78,143,214,0.30);
+  border-radius: 4px; color: var(--ink);
 }
 .promo-badge {
-  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
-  color: #FCF8F1; background: var(--red); border-radius: 999px; padding: 5px 12px;
+  font-family: var(--font-mono); font-size: 11px; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase;
+  color: #0E0F11; background: var(--red); border-radius: 2px; padding: 5px 12px;
 }
 .promo strong { color: var(--head); }
-@media (max-width: 560px) { .promo { border-radius: var(--radius-lg); } }
+
+/* about photo — squared frame, hairline (no soft shadow) */
+.about-photo { border-radius: 4px; box-shadow: none; border: 1px solid var(--line-strong); }
+.about-photo--placeholder { background: var(--surface); border: 1px dashed var(--line-strong); color: var(--blue); }
+
+/* scarcity pill → squared tag; accent pulse (redefines base keyframe) */
+.scarcity { border-radius: 3px; background: rgba(255,255,255,0.05); border: 1px solid var(--line); color: rgba(228,231,236,0.85); }
+.scarcity-dot { background: var(--red); }
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(78,143,214,0.55); }
+  70%  { box-shadow: 0 0 0 7px rgba(78,143,214,0); }
+  100% { box-shadow: 0 0 0 0 rgba(78,143,214,0); }
+}
+@media (prefers-reduced-motion: reduce) { .scarcity-dot { animation: none; } }
 
 /* selection + focus visibility */
-::selection { background: rgba(166,106,46,0.30); color: #241811; }
+::selection { background: rgba(78,143,214,0.35); color: #F6F8FA; }
 :focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+/* ============================================================
+   BRAND SYSTEM — tint-scale + spec-sheet (ownable signature)
+   ============================================================ */
+.spec-label {
+  font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--ink-soft);
+}
+.spec-label b, .spec-label strong { color: var(--head); font-weight: 400; }
+.section-index {
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--red-dark); margin: 0 0 12px;
+}
+/* the literal tint-darkness gradient — light (high VLT) → black (low VLT) */
+.tint-scale {
+  height: 8px; width: 100%; border-radius: 2px; border: 1px solid var(--line);
+  background: linear-gradient(90deg, #cfd6dd 0%, #8b95a0 24%, #4a545f 50%, #232a31 74%, #0b0d0f 100%);
+}
+.tint-scale-row { display: flex; align-items: center; gap: 14px; }
+.tint-scale-row .spec-label { white-space: nowrap; }
+/* corner registration ticks for spec-panels */
+.reg-tick::before, .reg-tick::after {
+  content: ""; position: absolute; width: 10px; height: 10px; border: 1.5px solid var(--red); pointer-events: none;
+}
+.reg-tick { position: relative; }
+.reg-tick::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+.reg-tick::after { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+/* ============================================================
+   Authorized-dealer + warranty band
+   ============================================================ */
+.dealer-band { border-block: 1px solid var(--line); background: var(--surface); padding: 28px 0; }
+.dealer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px 44px; }
+.dealer-brands-wrap { min-width: 0; }
+.dealer-label {
+  font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+  letter-spacing: 0.14em; color: var(--ink-soft); margin: 0 0 12px;
+}
+.dealer-brands { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 30px; list-style: none; margin: 0; padding: 0; }
+.dealer-brands li {
+  font-family: var(--font-display); font-weight: 700; font-size: clamp(17px, 2.2vw, 22px);
+  letter-spacing: 0.01em; color: var(--head); opacity: 0.85;
+}
+.warranty-seal {
+  display: inline-flex; align-items: center; gap: 13px; flex: none;
+  padding: 13px 18px; border: 1px solid var(--red); border-radius: 3px;
+  background: rgba(78,143,214,0.08);
+}
+.warranty-seal svg { width: 28px; height: 28px; color: var(--red); flex: none; }
+.warranty-seal strong { display: block; font-family: var(--font-display); font-size: 15px; color: var(--head); letter-spacing: -0.01em; }
+.warranty-seal span { font-family: var(--font-mono); font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink-soft); }
+@media (max-width: 720px) {
+  .dealer-inner { flex-direction: column; align-items: flex-start; }
+  .warranty-seal { width: 100%; }
+}
+
+/* ============================================================
+   Before / after tint reveal slider
+   ============================================================ */
+.ba-slider {
+  position: relative; width: 100%; max-width: 920px; margin: 0 auto;
+  aspect-ratio: 16 / 10; overflow: hidden; border: 1px solid var(--line-strong);
+  border-radius: 4px; user-select: none; touch-action: none; background: var(--surface);
+}
+.ba-slider img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.ba-after  { z-index: 1; }
+.ba-before { z-index: 2; clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+.ba-label {
+  position: absolute; z-index: 3; top: 12px;
+  font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em;
+  padding: 5px 10px; background: rgba(0,0,0,0.62); border: 1px solid var(--line);
+  color: var(--head); border-radius: 2px;
+}
+.ba-label.before { left: 12px; }
+.ba-label.after  { right: 12px; color: var(--red-dark); }
+.ba-divider { position: absolute; z-index: 4; top: 0; bottom: 0; left: var(--pos, 50%); width: 2px; background: var(--red); transform: translateX(-1px); pointer-events: none; }
+.ba-handle {
+  position: absolute; z-index: 5; top: 50%; left: var(--pos, 50%); transform: translate(-50%, -50%);
+  width: 44px; height: 44px; border-radius: 50%; background: var(--red); color: #08111C;
+  display: grid; place-items: center; box-shadow: 0 2px 12px rgba(0,0,0,0.55); pointer-events: none;
+}
+.ba-handle svg { width: 22px; height: 22px; }
+.ba-range { position: absolute; inset: 0; z-index: 6; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: ew-resize; }
+.ba-range:focus-visible ~ .ba-handle { outline: 2px solid #fff; outline-offset: 3px; border-radius: 50%; }
+
+/* ============================================================
+   Tint-darkness simulator
+   ============================================================ */
+.sim { max-width: 920px; margin: 0 auto; display: grid; gap: 20px; }
+.sim-stage { position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 4px; background: var(--surface); }
+.sim-stage img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sim-overlay { position: absolute; inset: 0; background: #000; opacity: var(--tint, 0.42); transition: opacity .35s var(--ease); pointer-events: none; }
+.sim-readout {
+  position: absolute; left: 12px; bottom: 12px; z-index: 2;
+  font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--head); background: rgba(0,0,0,0.62); border: 1px solid var(--line);
+  border-radius: 2px; padding: 6px 11px;
+}
+.sim-readout b { color: var(--red-dark); font-weight: 400; }
+.sim-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.sim-btn {
+  font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.04em;
+  color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  border-radius: 3px; padding: 10px 15px; cursor: pointer;
+  transition: border-color .2s var(--ease), color .2s var(--ease), background .2s var(--ease);
+}
+.sim-btn:hover { border-color: var(--line-strong); color: var(--head); }
+.sim-btn.is-active { background: var(--red); border-color: var(--red); color: #08111C; }
+.sim-btn:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+.sim-note { font-size: 13px; color: var(--muted); margin: 2px 0 0; }
+
+/* ============================================================
+   Illinois tint-law spec panel
+   ============================================================ */
+.lawtable-wrap { max-width: 820px; margin: 0 auto; border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+.lawtable { width: 100%; border-collapse: collapse; background: var(--surface); }
+.lawtable caption {
+  text-align: left; padding: 15px 20px;
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--ink-soft); border-bottom: 1px solid var(--line);
+}
+.lawtable th, .lawtable td { padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--line); font-size: 15px; }
+.lawtable thead th { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); background: var(--bone-2); }
+.lawtable tbody th { font-weight: 500; color: var(--ink); }
+.lawtable td { font-family: var(--font-mono); color: var(--head); letter-spacing: 0.03em; }
+.lawtable tbody tr:last-child th, .lawtable tbody tr:last-child td { border-bottom: 0; }
+.law-note { max-width: 820px; margin: 16px auto 0; font-size: 13px; color: var(--muted); }
